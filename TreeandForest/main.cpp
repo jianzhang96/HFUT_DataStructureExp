@@ -1,3 +1,15 @@
+/**
+ *Copyright:
+ *This code is free software; you can redistribute it and/or modify
+ *it under the terms of the GPL-3.0
+ *
+ * @author zhangjian
+ * @date 2017.11
+ *
+ */
+
+///////////////////////////////////////////////////////////////////////
+
 #include<iostream>
 #include "Forest.h"
 using namespace std;
@@ -7,49 +19,49 @@ int main()
     Forest fo1("./tree11.txt");
     Forest fo2("./F20.txt");
 
-    //(1)∞¥œ»–Ú°¢∫Û–Ú°¢≤„¥Œ±È¿˙…≠¡÷°£
-    cout<<"(1)∞¥œ»–Ú°¢∫Û–Ú°¢≤„¥Œ±È¿˙…≠¡÷°£"<<endl;
-    cout<<"µ⁄“ª◊È ˝æ›tree11£∫"<<endl;
+    //(1)ÊåâÂÖàÂ∫è„ÄÅÂêéÂ∫è„ÄÅÂ±ÇÊ¨°ÈÅçÂéÜÊ£ÆÊûó„ÄÇ
+    cout<<"(1)ÊåâÂÖàÂ∫è„ÄÅÂêéÂ∫è„ÄÅÂ±ÇÊ¨°ÈÅçÂéÜÊ£ÆÊûó„ÄÇ"<<endl;
+    cout<<"Á¨¨‰∏ÄÁªÑÊï∞ÊçÆtree11Ôºö"<<endl;
     fo1.print(1);fo1.print(2);fo1.print(3);
-    cout<<"µ⁄∂˛◊È ˝æ›f20: "<<endl;
+    cout<<"Á¨¨‰∫åÁªÑÊï∞ÊçÆf20: "<<endl;
     fo2.print(1);fo2.print(2);fo2.print(3);
-    //(2)«Û…≠¡÷µƒ∏ﬂ∂»°£
-    cout<<"(2)«Û…≠¡÷µƒ∏ﬂ∂»°£"<<endl;
-    cout<<"µ⁄“ª◊È ˝æ›tree11£∫"<<endl;
+    //(2)Ê±ÇÊ£ÆÊûóÁöÑÈ´òÂ∫¶„ÄÇ
+    cout<<"(2)Ê±ÇÊ£ÆÊûóÁöÑÈ´òÂ∫¶„ÄÇ"<<endl;
+    cout<<"Á¨¨‰∏ÄÁªÑÊï∞ÊçÆtree11Ôºö"<<endl;
     cout<<fo1.height()<<endl;
-    cout<<"µ⁄∂˛◊È ˝æ›f20: "<<endl;
+    cout<<"Á¨¨‰∫åÁªÑÊï∞ÊçÆf20: "<<endl;
     cout<<fo2.height()<<endl;
-    //(3)«Û…≠¡÷Ω·µ„◊‹ ˝°£
-    cout<<"(3)«Û…≠¡÷Ω·µ„◊‹ ˝°£"<<endl;
-    cout<<"µ⁄“ª◊È ˝æ›tree11£∫"<<endl;
+    //(3)Ê±ÇÊ£ÆÊûóÁªìÁÇπÊÄªÊï∞„ÄÇ
+    cout<<"(3)Ê±ÇÊ£ÆÊûóÁªìÁÇπÊÄªÊï∞„ÄÇ"<<endl;
+    cout<<"Á¨¨‰∏ÄÁªÑÊï∞ÊçÆtree11Ôºö"<<endl;
     cout<<fo1.node_count()<<endl;
-    cout<<"µ⁄∂˛◊È ˝æ›f20: "<<endl;
+    cout<<"Á¨¨‰∫åÁªÑÊï∞ÊçÆf20: "<<endl;
     cout<<fo2.node_count()<<endl;
-    //(4)«Û…≠¡÷“∂◊”Ω·µ„ ˝°£
-    cout<<"(4)«Û…≠¡÷“∂◊”Ω·µ„ ˝°£"<<endl;
-    cout<<"µ⁄“ª◊È ˝æ›tree11£∫"<<endl;
+    //(4)Ê±ÇÊ£ÆÊûóÂè∂Â≠êÁªìÁÇπÊï∞„ÄÇ
+    cout<<"(4)Ê±ÇÊ£ÆÊûóÂè∂Â≠êÁªìÁÇπÊï∞„ÄÇ"<<endl;
+    cout<<"Á¨¨‰∏ÄÁªÑÊï∞ÊçÆtree11Ôºö"<<endl;
     cout<<fo1.leaves()<<endl;
-    cout<<"µ⁄∂˛◊È ˝æ›f20: "<<endl;
+    cout<<"Á¨¨‰∫åÁªÑÊï∞ÊçÆf20: "<<endl;
     cout<<fo2.leaves()<<endl;
-    //(5)«Û…≠¡÷µƒ∂»°£
-    cout<<"(5)«Û…≠¡÷µƒ∂»°£"<<endl;
-    cout<<"µ⁄“ª◊È ˝æ›tree11£∫"<<endl;
+    //(5)Ê±ÇÊ£ÆÊûóÁöÑÂ∫¶„ÄÇ
+    cout<<"(5)Ê±ÇÊ£ÆÊûóÁöÑÂ∫¶„ÄÇ"<<endl;
+    cout<<"Á¨¨‰∏ÄÁªÑÊï∞ÊçÆtree11Ôºö"<<endl;
     cout<<fo1.degrees()<<endl;
-    cout<<"µ⁄∂˛◊È ˝æ›f20: "<<endl;
+    cout<<"Á¨¨‰∫åÁªÑÊï∞ÊçÆf20: "<<endl;
     cout<<fo2.degrees()<<endl;
-    //(6)œ»–Ú ‰≥ˆΩ·µ„÷µº∞∆‰≤„¥Œ∫≈°£
-    cout<<"(6)œ»–Ú ‰≥ˆΩ·µ„÷µº∞∆‰≤„¥Œ∫≈°£"<<endl;
-    cout<<"µ⁄“ª◊È ˝æ›tree11£∫"<<endl;
+    //(6)ÂÖàÂ∫èËæìÂá∫ÁªìÁÇπÂÄºÂèäÂÖ∂Â±ÇÊ¨°Âè∑„ÄÇ
+    cout<<"(6)ÂÖàÂ∫èËæìÂá∫ÁªìÁÇπÂÄºÂèäÂÖ∂Â±ÇÊ¨°Âè∑„ÄÇ"<<endl;
+    cout<<"Á¨¨‰∏ÄÁªÑÊï∞ÊçÆtree11Ôºö"<<endl;
     fo1.print(4);
-    cout<<"µ⁄∂˛◊È ˝æ›f20: "<<endl;
+    cout<<"Á¨¨‰∫åÁªÑÊï∞ÊçÆf20: "<<endl;
     fo2.print(4);
-    //(7) ‰≥ˆπ„“Â±Ì±Ì æµƒ ˜°£
-    cout<<"(7) ‰≥ˆπ„“Â±Ì±Ì æµƒ ˜°£"<<endl;
-    cout<<"µ⁄“ª◊È ˝æ›tree11£∫"<<endl;
+    //(7)ËæìÂá∫Âπø‰πâË°®Ë°®Á§∫ÁöÑÊ†ë„ÄÇ
+    cout<<"(7)ËæìÂá∫Âπø‰πâË°®Ë°®Á§∫ÁöÑÊ†ë„ÄÇ"<<endl;
+    cout<<"Á¨¨‰∏ÄÁªÑÊï∞ÊçÆtree11Ôºö"<<endl;
     fo1.print(6);
-    cout<<"µ⁄∂˛◊È ˝æ›f20: "<<endl;
+    cout<<"Á¨¨‰∫åÁªÑÊï∞ÊçÆf20: "<<endl;
     fo2.print(6);
     cout<<endl;
-    cout<<"ÕÍ≥…"<<endl;
+    cout<<"ÂÆåÊàê"<<endl;
     return 0;
 }
