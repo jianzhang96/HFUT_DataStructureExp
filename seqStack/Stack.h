@@ -1,3 +1,15 @@
+/**
+ *Copyright:
+ *This code is free software; you can redistribute it and/or modify
+ *it under the terms of the GPL-3.0
+ *
+ * @author zhangjian
+ * @date 2017.11
+ *
+ */
+
+///////////////////////////////////////////////////////////////////////
+
 #ifndef STACK_H
 #define STACK_H
 
@@ -33,7 +45,7 @@ Stack<Type>::Stack()
     top=-1;
     std::srand(std::time(0));
 }
-//用数组构造
+//脫脙脢媒脳茅鹿鹿脭矛
 template<typename Type>
 Stack<Type>::Stack(Type*s,int n)
 {
