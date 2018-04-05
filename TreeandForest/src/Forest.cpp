@@ -1,3 +1,15 @@
+/**
+ *Copyright:
+ *This code is free software; you can redistribute it and/or modify
+ *it under the terms of the GPL-3.0
+ *
+ * @author zhangjian
+ * @date 2017.11
+ *
+ */
+
+///////////////////////////////////////////////////////////////////////
+
 #include "Forest.h"
 #include <fstream>
 
@@ -9,7 +21,7 @@ Forest::Forest()
 
 Forest::Forest(string path)
 {
-    //Ë«Ç×½ÚµãºÍ¶ş²æÁ´±í·Ö±ğ³õÊ¼»¯
+    //åŒäº²èŠ‚ç‚¹å’ŒäºŒå‰é“¾è¡¨åˆ†åˆ«åˆå§‹åŒ–
     ifstream fin(path);
     string nodes;
     char tc;
@@ -24,7 +36,7 @@ Forest::Forest(string path)
         }
         fin.get(tc);
     }
-    //¶ÔÃ¿¸öÔªËØ°²ÕÒºÃ¸¸½Úµã
+    //å¯¹æ¯ä¸ªå…ƒç´ å®‰æ‰¾å¥½çˆ¶èŠ‚ç‚¹
     char fat,child;
     int idx=-1,cidx;
     while(!fin.eof())
@@ -38,14 +50,14 @@ Forest::Forest(string path)
 
         ptree[cidx].parent=idx;
     }
-    //ÉÏÃæÒÑ¾­°ÑË«Ç×±íÊ¾·¨´´½¨³É¹¦£¬ÏÂÃæ´´½¨Ò»¸ö¶ş²æÁ´±í±íÊ¾µÄÉ­ÁÖ
+    //ä¸Šé¢å·²ç»æŠŠåŒäº²è¡¨ç¤ºæ³•åˆ›å»ºæˆåŠŸï¼Œä¸‹é¢åˆ›å»ºä¸€ä¸ªäºŒå‰é“¾è¡¨è¡¨ç¤ºçš„æ£®æ—
     int v1;
     for(int i=0;i<ptree.size();i++)
         if(ptree[i].parent==-1)
         { v1=i; break; }
 
     create(root,v1);
-    //´´½¨Ê÷»òÉ­ÁÖ£¬Èç¹ûÊÇÉ­ÁÖ£¬ÄÇÃ´°ÑÊ÷µÄ¸ù½áµã¿´×÷ĞÖµÜ½Úµã
+    //åˆ›å»ºæ ‘æˆ–æ£®æ—ï¼Œå¦‚æœæ˜¯æ£®æ—ï¼Œé‚£ä¹ˆæŠŠæ ‘çš„æ ¹ç»“ç‚¹çœ‹ä½œå…„å¼ŸèŠ‚ç‚¹
 
 }
 
@@ -57,13 +69,13 @@ void Forest::create(csNode *&T,int v)
 	T->data=ptree[v].data;
 	T->firstChild=NULL;
 	T->nextSibling=NULL;
-	w=firstChild(v);  //ËÑË÷vµÄµÚÒ»¸öº¢×Ó½áµã
+	w=firstChild(v);  //æœç´¢vçš„ç¬¬ä¸€ä¸ªå­©å­ç»“ç‚¹
 	if(w!=-1)
 	{
 		create(T->firstChild,w);
 	}
 
-	w=next(v);       //ËÑË÷vµÄÏÂÒ»¸öĞÖµÜ½áµã
+	w=next(v);       //æœç´¢vçš„ä¸‹ä¸€ä¸ªå…„å¼Ÿç»“ç‚¹
 	if(w!=-1)
 	{
 		create(T->nextSibling,w);
@@ -184,7 +196,7 @@ void Forest::print(int fg)
     }
 }
 
-//ÓÃË«Ç×±íÊ¾µÄvectorÀ´Çó¸ß¶È
+//ç”¨åŒäº²è¡¨ç¤ºçš„vectoræ¥æ±‚é«˜åº¦
 int Forest::height()
 {
     int h=1,h1=1;
@@ -208,7 +220,7 @@ int Forest::node_count()
 }
 int Forest::leaves()
 {
-    //Èç¹ûµÚÒ»¸öº¢×ÓÎª¿Õ£¬ÄÇÃ´ÊÇÒ¶×Ó½Úµã
+    //å¦‚æœç¬¬ä¸€ä¸ªå­©å­ä¸ºç©ºï¼Œé‚£ä¹ˆæ˜¯å¶å­èŠ‚ç‚¹
     int ct=0;
     for(int i=0;i<ptree.size();i++)
     {
