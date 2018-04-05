@@ -1,3 +1,15 @@
+/**
+ *Copyright:
+ *This code is free software; you can redistribute it and/or modify
+ *it under the terms of the GPL-3.0
+ *
+ * @author zhangjian
+ * @date 2017.11
+ *
+ */
+
+///////////////////////////////////////////////////////////////////////
+
 #include<iostream>
 #include "BinaryTree.h"
 
@@ -32,14 +44,14 @@ int bin_search(int a[],int n,int key)
 }
 void bin_sort_exp()
 {
-    //(1) ¶ÔÏÂÁÐÊý¾Ý±í£¬·Ö±ð²ÉÓÃ¶þ·Ö²éÕÒËã·¨ÊµÏÖ²éÕÒ£¬
-    //¸ø³ö²éÕÒ¹ý³ÌÒÀ´ÎËù±È½ÏµÄÔªËØ£¨µÄÏÂ±ê£©£¬²¢ÒÔ¶þ·Ö²éÕÒµÄÅÐ¶¨Ê÷À´½âÊÍ¡£
+    //(1) å¯¹ä¸‹åˆ—æ•°æ®è¡¨ï¼Œåˆ†åˆ«é‡‡ç”¨äºŒåˆ†æŸ¥æ‰¾ç®—æ³•å®žçŽ°æŸ¥æ‰¾ï¼Œ
+    //ç»™å‡ºæŸ¥æ‰¾è¿‡ç¨‹ä¾æ¬¡æ‰€æ¯”è¾ƒçš„å…ƒç´ ï¼ˆçš„ä¸‹æ ‡ï¼‰ï¼Œå¹¶ä»¥äºŒåˆ†æŸ¥æ‰¾çš„åˆ¤å®šæ ‘æ¥è§£é‡Šã€‚
     int a1[]={1,2,3,4,6,7,8,9,10,11,12,13,17,18,19,20,24,25,26,30,35,40,45,50,100};
     int a2[]={2,3,5,7,8,10,12,15,18,20,22,25,30,35,40,45,50,55,60,80,100};
     int e1[]={2,8,20,30,50,5,15,33,110 };
     int e2[]={22,8,80,3,100,1,13,120};
-    cout<<"(1)¶þ·Ö²éÕÒ"<<endl;
-    cout<<"µÚÒ»×éÊý¾Ý:";
+    cout<<"(1)äºŒåˆ†æŸ¥æ‰¾"<<endl;
+    cout<<"ç¬¬ä¸€ç»„æ•°æ®:";
     for(int i=0;i<sizeof(a1)/sizeof(a1[0]);i++) cout<<a1[i]<<' ';
     cout<<endl;
     for(int i=0;i<sizeof(e1)/sizeof(e1[0]);i++)
@@ -47,7 +59,7 @@ void bin_sort_exp()
         cout<<e1[i]<<": "<<bin_search(a1,sizeof(a1)/sizeof(a1[0]),e1[i])<<endl;
     }
     cout<<endl;
-    cout<<"µÚ¶þ×éÊý¾Ý:";
+    cout<<"ç¬¬äºŒç»„æ•°æ®:";
     for(int i=0;i<sizeof(a2)/sizeof(a2[0]);i++) cout<<a2[i]<<' ';
     cout<<endl;
     for(int i=0;i<sizeof(e2)/sizeof(e2[0]);i++)
@@ -55,61 +67,61 @@ void bin_sort_exp()
         cout<<e2[i]<<": "<<bin_search(a2,sizeof(a2)/sizeof(a2[0]),e2[i])<<endl;
     }
     cout<<endl;
-    //ÏÂÃæµÄÊµÑéºÍ¶þ²æÅÅÐòÊ÷ÓÐ¹Ø£¬ËùÒÔÔÚÀàÖÐÊµÏÖ
-    //(2) Éè¼Æ³öÔÚ¶þ²æÅÅÐòÊ÷ÖÐ²åÈë½áµãµÄËã·¨£¬ÔÚ´Ë»ù´¡ÉÏÊµÏÖ¹¹½¨¶þ²æÅÅÐòÊ÷µÄËã·¨¡£
-    cout<<"(2) Éè¼Æ³öÔÚ¶þ²æÅÅÐòÊ÷ÖÐ²åÈë½áµãµÄËã·¨£¬ÔÚ´Ë»ù´¡ÉÏÊµÏÖ¹¹½¨¶þ²æÅÅÐòÊ÷µÄËã·¨¡£"<<endl;
+    //ä¸‹é¢çš„å®žéªŒå’ŒäºŒå‰æŽ’åºæ ‘æœ‰å…³ï¼Œæ‰€ä»¥åœ¨ç±»ä¸­å®žçŽ°
+    //(2) è®¾è®¡å‡ºåœ¨äºŒå‰æŽ’åºæ ‘ä¸­æ’å…¥ç»“ç‚¹çš„ç®—æ³•ï¼Œåœ¨æ­¤åŸºç¡€ä¸Šå®žçŽ°æž„å»ºäºŒå‰æŽ’åºæ ‘çš„ç®—æ³•ã€‚
+    cout<<"(2) è®¾è®¡å‡ºåœ¨äºŒå‰æŽ’åºæ ‘ä¸­æ’å…¥ç»“ç‚¹çš„ç®—æ³•ï¼Œåœ¨æ­¤åŸºç¡€ä¸Šå®žçŽ°æž„å»ºäºŒå‰æŽ’åºæ ‘çš„ç®—æ³•ã€‚"<<endl;
     int a3[]={100,150,120,50,70,60,80,170,180,160,110,30,40,35,175};
     int a4[]={100,70,60,80,150,120,50,160,30,40,170,180,175,35};
     BinaryTree st1(a3,sizeof(a3)/sizeof(a3[0]));
     BinaryTree st2(a4,sizeof(a4)/sizeof(a4[0]));
-    cout<<"µÚÒ»×éÊý¾Ý£º"<<endl;
+    cout<<"ç¬¬ä¸€ç»„æ•°æ®ï¼š"<<endl;
     st1.print(2);
-    cout<<"µÚ¶þ×éÊý¾Ý£º"<<endl;
+    cout<<"ç¬¬äºŒç»„æ•°æ®ï¼š"<<endl;
     st2.print(2);
     cout<<endl;
-    //(3) Éè¼ÆËã·¨ÔÚ¶þ²æÅÅÐòÊ÷ÖÐ²éÕÒÖ¸¶¨ÖµµÄ½áµã¡£
-    cout<<"(3) Éè¼ÆËã·¨ÔÚ¶þ²æÅÅÐòÊ÷ÖÐ²éÕÒÖ¸¶¨ÖµµÄ½áµã¡£"<<endl;
+    //(3) è®¾è®¡ç®—æ³•åœ¨äºŒå‰æŽ’åºæ ‘ä¸­æŸ¥æ‰¾æŒ‡å®šå€¼çš„ç»“ç‚¹ã€‚
+    cout<<"(3) è®¾è®¡ç®—æ³•åœ¨äºŒå‰æŽ’åºæ ‘ä¸­æŸ¥æ‰¾æŒ‡å®šå€¼çš„ç»“ç‚¹ã€‚"<<endl;
     int e3[]={150,70,160,190,10,55,175 };
     for(int i=0;i<sizeof(e3)/sizeof(e3[0]);i++)
         st1.search(e3[i]);
     cout<<endl;
-    //(4) Éè¼ÆËã·¨ÔÚ¶þ²æÅÅÐòÊ÷ÖÐÉ¾³ýÌØ¶¨ÖµµÄ½áµã¡£
-    cout<<"(4) Éè¼ÆËã·¨ÔÚ¶þ²æÅÅÐòÊ÷ÖÐÉ¾³ýÌØ¶¨ÖµµÄ½áµã."<<endl;
-    cout<<"É¾³ýÇ°£º";st1.print(2);
-    cout<<"É¾³ý30£º";st1.remove(30); st1.print(2);
-    cout<<"É¾³ý150£º";st1.remove(150); st1.print(2);
-    cout<<"É¾³ý100: ";st1.remove(100); st1.print(2);
+    //(4) è®¾è®¡ç®—æ³•åœ¨äºŒå‰æŽ’åºæ ‘ä¸­åˆ é™¤ç‰¹å®šå€¼çš„ç»“ç‚¹ã€‚
+    cout<<"(4) è®¾è®¡ç®—æ³•åœ¨äºŒå‰æŽ’åºæ ‘ä¸­åˆ é™¤ç‰¹å®šå€¼çš„ç»“ç‚¹."<<endl;
+    cout<<"åˆ é™¤å‰ï¼š";st1.print(2);
+    cout<<"åˆ é™¤30ï¼š";st1.remove(30); st1.print(2);
+    cout<<"åˆ é™¤150ï¼š";st1.remove(150); st1.print(2);
+    cout<<"åˆ é™¤100: ";st1.remove(100); st1.print(2);
     cout<<endl;
-    //(5) ÒÑÖªÕûÐÍÊý×éA[1..26]µÝÔöÓÐÐò£¬Éè¼ÆËã·¨ÒÔ¹¹ÔìÒ»¿ÃÆ½ºâµÄ¶þ²æÅÅÐòÊ÷À´´æ·Å¸ÃÊý×éÖÐµÄËùÓÐÔªËØ¡£
-    cout<<"(5) ÒÑÖªÕûÐÍÊý×éA[1..26]µÝÔöÓÐÐò£¬Éè¼ÆËã·¨ÒÔ¹¹ÔìÒ»¿ÃÆ½ºâµÄ¶þ²æÅÅÐòÊ÷À´´æ·Å¸ÃÊý×éÖÐµÄËùÓÐÔªËØ¡£"<<endl;
+    //(5) å·²çŸ¥æ•´åž‹æ•°ç»„A[1..26]é€’å¢žæœ‰åºï¼Œè®¾è®¡ç®—æ³•ä»¥æž„é€ ä¸€æ£µå¹³è¡¡çš„äºŒå‰æŽ’åºæ ‘æ¥å­˜æ”¾è¯¥æ•°ç»„ä¸­çš„æ‰€æœ‰å…ƒç´ ã€‚
+    cout<<"(5) å·²çŸ¥æ•´åž‹æ•°ç»„A[1..26]é€’å¢žæœ‰åºï¼Œè®¾è®¡ç®—æ³•ä»¥æž„é€ ä¸€æ£µå¹³è¡¡çš„äºŒå‰æŽ’åºæ ‘æ¥å­˜æ”¾è¯¥æ•°ç»„ä¸­çš„æ‰€æœ‰å…ƒç´ ã€‚"<<endl;
     int a5[]={1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26};
     int a6[]={1,3,6,10,15,21,28,36,45,55,66,78,91,105,120,136,153,171,190,210,231,253,277,302,328};
     BinaryTree avl_st1(a5,sizeof(a5)/sizeof(a5[0]),true);
     BinaryTree avl_st2(a6,sizeof(a6)/sizeof(a6[0]),true);
-    cout<<"µÚÒ»×éÊý¾Ý£º"<<endl;
+    cout<<"ç¬¬ä¸€ç»„æ•°æ®ï¼š"<<endl;
     avl_st1.print_by_level();
     cout<<endl;
-    cout<<"µÚ¶þ×éÊý¾Ý£º"<<endl;
+    cout<<"ç¬¬äºŒç»„æ•°æ®ï¼š"<<endl;
     avl_st2.print_by_level();
     cout<<endl<<endl;
     //
 
-    cout<<"Íê³É"<<endl;
+    cout<<"å®Œæˆ"<<endl;
 
 }
 void binary_exp()
 {
     BinaryTree tree1("./btr151.txt");
     BinaryTree tree2("./btr21.txt");
-//    <1>´òÓ¡³ö¶þ²æÊ÷µÄÈýÖÖ±éÀúÐò¡£
-//    ÊµÑé²âÊÔÊý¾Ý»ù±¾ÒªÇó£º
-//    µÚÒ»×éÊý¾Ý£º bt151.btr
-//    µÚ¶þ×éÊý¾Ý£º bt21.btr
-    cout<<"<1>´òÓ¡³ö¶þ²æÊ÷µÄÈýÖÖ±éÀúÐò¡£"<<endl;
+//    <1>æ‰“å°å‡ºäºŒå‰æ ‘çš„ä¸‰ç§éåŽ†åºã€‚
+//    å®žéªŒæµ‹è¯•æ•°æ®åŸºæœ¬è¦æ±‚ï¼š
+//    ç¬¬ä¸€ç»„æ•°æ®ï¼š bt151.btr
+//    ç¬¬äºŒç»„æ•°æ®ï¼š bt21.btr
+    cout<<"<1>æ‰“å°å‡ºäºŒå‰æ ‘çš„ä¸‰ç§éåŽ†åºã€‚"<<endl;
     for(int i=1;i<=2;i++)
     {
-        cout<<"µÚ"<<i<<"×éÊý¾Ý£º"<<endl;
-        cout<<"ÏÈÐò£¬ÖÐÐò£¬ºóÐò±éÀúÊä³ö"<<endl;
+        cout<<"ç¬¬"<<i<<"ç»„æ•°æ®ï¼š"<<endl;
+        cout<<"å…ˆåºï¼Œä¸­åºï¼ŒåŽåºéåŽ†è¾“å‡º"<<endl;
         if(i==1){
             tree1.print(1);
             tree1.print(2);
@@ -121,162 +133,162 @@ void binary_exp()
             tree2.print(3);
         }
     }
-//    <2>Éè¼ÆËã·¨°´ÖÐÐò´ÎÐòÊä³ö¶þ²æÊ÷ÖÐ¸÷½áµãµÄÖµ¼°ÆäËù¶ÔÓ¦µÄ²ã´ÎÊý¡£
+//    <2>è®¾è®¡ç®—æ³•æŒ‰ä¸­åºæ¬¡åºè¾“å‡ºäºŒå‰æ ‘ä¸­å„ç»“ç‚¹çš„å€¼åŠå…¶æ‰€å¯¹åº”çš„å±‚æ¬¡æ•°ã€‚
     cout<<endl;
-    cout<<"<2>Éè¼ÆËã·¨°´ÖÐÐò´ÎÐòÊä³ö¶þ²æÊ÷ÖÐ¸÷½áµãµÄÖµ¼°ÆäËù¶ÔÓ¦µÄ²ã´ÎÊý¡£"<<endl;
-    cout<<"µÚÒ»×éÊý¾Ýbt151.btr£º"<<endl;
+    cout<<"<2>è®¾è®¡ç®—æ³•æŒ‰ä¸­åºæ¬¡åºè¾“å‡ºäºŒå‰æ ‘ä¸­å„ç»“ç‚¹çš„å€¼åŠå…¶æ‰€å¯¹åº”çš„å±‚æ¬¡æ•°ã€‚"<<endl;
+    cout<<"ç¬¬ä¸€ç»„æ•°æ®bt151.btrï¼š"<<endl;
     tree1.inorder_and_level();
-    cout<<"µÚ¶þ×éÊý¾Ýbt21.btr£º"<<endl;
+    cout<<"ç¬¬äºŒç»„æ•°æ®bt21.btrï¼š"<<endl;
     tree2.inorder_and_level();
     cout<<endl;
-//    <3>Çó¶þ²æÊ÷µÄ¸ß¶È¡£
-//	ÊµÑé²âÊÔÊý¾Ý»ù±¾ÒªÇó£º
-//    µÚÒ»×éÊý¾Ý£º bt261.btr
-//    µÚ¶þ×éÊý¾Ý£º bt21.btr
-    cout<<"<3>Çó¶þ²æÊ÷µÄ¸ß¶È¡£"<<endl;
+//    <3>æ±‚äºŒå‰æ ‘çš„é«˜åº¦ã€‚
+//	å®žéªŒæµ‹è¯•æ•°æ®åŸºæœ¬è¦æ±‚ï¼š
+//    ç¬¬ä¸€ç»„æ•°æ®ï¼š bt261.btr
+//    ç¬¬äºŒç»„æ•°æ®ï¼š bt21.btr
+    cout<<"<3>æ±‚äºŒå‰æ ‘çš„é«˜åº¦ã€‚"<<endl;
     BinaryTree tree3("./btr261.txt");
-    cout<<"µÚÒ»×éÊý¾Ý£º bt261.btr"<<endl;
+    cout<<"ç¬¬ä¸€ç»„æ•°æ®ï¼š bt261.btr"<<endl;
     cout<<tree3.height()<<endl;
-    cout<<"µÚ¶þ×éÊý¾Ý£º bt21.btr"<<endl;
+    cout<<"ç¬¬äºŒç»„æ•°æ®ï¼š bt21.btr"<<endl;
     cout<<tree2.height()<<endl;
 
     cout<<endl;
-//    <4>Çó¶þ²æÊ÷µÄ½áµãÊý¡£
-//    µÚÒ»×éÊý¾Ý£º bt261.btr
-//    µÚ¶þ×éÊý¾Ý£º bt21.btr
-    cout<<"<4>Çó¶þ²æÊ÷µÄ½áµãÊý¡£"<<endl;
-    cout<<"µÚÒ»×éÊý¾Ý£º bt261.btr: "<<tree3.count()<<endl;
-    cout<<"µÚ¶þ×éÊý¾Ý£º bt21.btr: "<<tree2.count()<<endl;
+//    <4>æ±‚äºŒå‰æ ‘çš„ç»“ç‚¹æ•°ã€‚
+//    ç¬¬ä¸€ç»„æ•°æ®ï¼š bt261.btr
+//    ç¬¬äºŒç»„æ•°æ®ï¼š bt21.btr
+    cout<<"<4>æ±‚äºŒå‰æ ‘çš„ç»“ç‚¹æ•°ã€‚"<<endl;
+    cout<<"ç¬¬ä¸€ç»„æ•°æ®ï¼š bt261.btr: "<<tree3.count()<<endl;
+    cout<<"ç¬¬äºŒç»„æ•°æ®ï¼š bt21.btr: "<<tree2.count()<<endl;
 
     cout<<endl;
-//    <5>Çó¶þ²æÊ÷µÄÒ¶×Ó½áµãÊý¡£
-//	ÊµÑé²âÊÔÊý¾Ý»ù±¾ÒªÇó£º
-//    µÚÒ»×éÊý¾Ý£º bt261.btr
-//    µÚ¶þ×éÊý¾Ý£º bt21.btr
-    cout<<"<5>Çó¶þ²æÊ÷µÄÒ¶×Ó½áµãÊý¡£"<<endl;
-    cout<<"µÚÒ»×éÊý¾Ý£ºbt261.btr: "<<tree3.leaves()<<endl;
-    cout<<"µÚ¶þ×éÊý¾Ý£ºbt21.btr: "<<tree2.leaves()<<endl;
+//    <5>æ±‚äºŒå‰æ ‘çš„å¶å­ç»“ç‚¹æ•°ã€‚
+//	å®žéªŒæµ‹è¯•æ•°æ®åŸºæœ¬è¦æ±‚ï¼š
+//    ç¬¬ä¸€ç»„æ•°æ®ï¼š bt261.btr
+//    ç¬¬äºŒç»„æ•°æ®ï¼š bt21.btr
+    cout<<"<5>æ±‚äºŒå‰æ ‘çš„å¶å­ç»“ç‚¹æ•°ã€‚"<<endl;
+    cout<<"ç¬¬ä¸€ç»„æ•°æ®ï¼šbt261.btr: "<<tree3.leaves()<<endl;
+    cout<<"ç¬¬äºŒç»„æ•°æ®ï¼šbt21.btr: "<<tree2.leaves()<<endl;
     cout<<endl;
 
-//    <6>Çó¶þ²æÊ÷µÄ¶ÈÎª2µÄ½áµãÊý¡£
-//	ÊµÑé²âÊÔÊý¾Ý»ù±¾ÒªÇó£º
-//    µÚÒ»×éÊý¾Ý£º bt261.btr
-//    µÚ¶þ×éÊý¾Ý£º bt21.btr
+//    <6>æ±‚äºŒå‰æ ‘çš„åº¦ä¸º2çš„ç»“ç‚¹æ•°ã€‚
+//	å®žéªŒæµ‹è¯•æ•°æ®åŸºæœ¬è¦æ±‚ï¼š
+//    ç¬¬ä¸€ç»„æ•°æ®ï¼š bt261.btr
+//    ç¬¬äºŒç»„æ•°æ®ï¼š bt21.btr
 
-    cout<<"<6>Çó¶þ²æÊ÷µÄ¶ÈÎª2µÄ½áµãÊý¡£"<<endl;
-    cout<<"µÚÒ»×éÊý¾Ý£º bt261.btr: "<<tree3.two_degree_nodes()<<endl;
-    cout<<"µÚ¶þ×éÊý¾Ý£º bt21.btr: "<<tree2.two_degree_nodes()<<endl;
+    cout<<"<6>æ±‚äºŒå‰æ ‘çš„åº¦ä¸º2çš„ç»“ç‚¹æ•°ã€‚"<<endl;
+    cout<<"ç¬¬ä¸€ç»„æ•°æ®ï¼š bt261.btr: "<<tree3.two_degree_nodes()<<endl;
+    cout<<"ç¬¬äºŒç»„æ•°æ®ï¼š bt21.btr: "<<tree2.two_degree_nodes()<<endl;
     cout<<endl;
 
-//    <7>¼üÅÌÊäÈëÒ»¸öÔªËØx£¬ÇóÆä¸¸½Úµã¡¢ÐÖµÜ½áµã¡¢×Ó½áµãµÄÖµ£¬²»´æÔÚÊ±¸ø³öÏàÓ¦ÌáÊ¾ÐÅÏ¢¡£
-//    ¶ÔÐÖµÜ½áµãºÍº¢×Ó½áµã£¬´æÔÚÊ±ÒªÃ÷È·Ö¸³öÊÇ×óÐÖµÜ¡¢×óº¢×Ó¡¢ÓÒÐÖµÜ»òÓÒº¢×Ó¡£
-//	ÊµÑé²âÊÔÊý¾Ý»ù±¾ÒªÇó£º
-//    µÚÒ»×éÊý¾Ý£º bt31.btr
-//    µÚ¶þ×éÊý¾Ý£º bt21.btr
+//    <7>é”®ç›˜è¾“å…¥ä¸€ä¸ªå…ƒç´ xï¼Œæ±‚å…¶çˆ¶èŠ‚ç‚¹ã€å…„å¼Ÿç»“ç‚¹ã€å­ç»“ç‚¹çš„å€¼ï¼Œä¸å­˜åœ¨æ—¶ç»™å‡ºç›¸åº”æç¤ºä¿¡æ¯ã€‚
+//    å¯¹å…„å¼Ÿç»“ç‚¹å’Œå­©å­ç»“ç‚¹ï¼Œå­˜åœ¨æ—¶è¦æ˜Žç¡®æŒ‡å‡ºæ˜¯å·¦å…„å¼Ÿã€å·¦å­©å­ã€å³å…„å¼Ÿæˆ–å³å­©å­ã€‚
+//	å®žéªŒæµ‹è¯•æ•°æ®åŸºæœ¬è¦æ±‚ï¼š
+//    ç¬¬ä¸€ç»„æ•°æ®ï¼š bt31.btr
+//    ç¬¬äºŒç»„æ•°æ®ï¼š bt21.btr
 
     BinaryTree tree4("./btr31.txt");
-    cout<<"<7>¼üÅÌÊäÈëÒ»¸öÔªËØx£¬ÇóÆä¸¸½Úµã¡¢ÐÖµÜ½áµã¡¢×Ó½áµãµÄÖµ£¬²»´æÔÚÊ±¸ø³öÏàÓ¦ÌáÊ¾ÐÅÏ¢¡£"<<endl;
-    cout<<"µÚÒ»×éÊý¾Ý£º bt31.btr:"<<endl;
-    cout<<"ÊäÈëÒ»¸öÊ÷ÖÐµÄ×Ö·û£º";
+    cout<<"<7>é”®ç›˜è¾“å…¥ä¸€ä¸ªå…ƒç´ xï¼Œæ±‚å…¶çˆ¶èŠ‚ç‚¹ã€å…„å¼Ÿç»“ç‚¹ã€å­ç»“ç‚¹çš„å€¼ï¼Œä¸å­˜åœ¨æ—¶ç»™å‡ºç›¸åº”æç¤ºä¿¡æ¯ã€‚"<<endl;
+    cout<<"ç¬¬ä¸€ç»„æ•°æ®ï¼š bt31.btr:"<<endl;
+    cout<<"è¾“å…¥ä¸€ä¸ªæ ‘ä¸­çš„å­—ç¬¦ï¼š";
     char t;cin>>t;
     tree4.about_x(t);
     cout<<endl<<endl;
-    cout<<"µÚ¶þ×éÊý¾Ý£º bt21.btr"<<endl;
-    cout<<"ÊäÈëÒ»¸ö×Ö·û£º";cin>>t;
+    cout<<"ç¬¬äºŒç»„æ•°æ®ï¼š bt21.btr"<<endl;
+    cout<<"è¾“å…¥ä¸€ä¸ªå­—ç¬¦ï¼š";cin>>t;
     tree2.about_x(t);
     cout<<endl<<endl;
 
-//    <8>¼üÅÌÊäÈëÒ»¸öÔªËØx£¬ÇóÆäÔÚÊ÷ÖÐµÄ²ã´Î¡£²»´æÔÚÊ±¸ø³öÏàÓ¦ÌáÊ¾ÐÅÏ¢¡£
-//	ÊµÑé²âÊÔÊý¾Ý»ù±¾ÒªÇó£º
-//    µÚÒ»×éÊý¾Ý£º bt26.btr
-//    µÚ¶þ×éÊý¾Ý£º bt21.btr
+//    <8>é”®ç›˜è¾“å…¥ä¸€ä¸ªå…ƒç´ xï¼Œæ±‚å…¶åœ¨æ ‘ä¸­çš„å±‚æ¬¡ã€‚ä¸å­˜åœ¨æ—¶ç»™å‡ºç›¸åº”æç¤ºä¿¡æ¯ã€‚
+//	å®žéªŒæµ‹è¯•æ•°æ®åŸºæœ¬è¦æ±‚ï¼š
+//    ç¬¬ä¸€ç»„æ•°æ®ï¼š bt26.btr
+//    ç¬¬äºŒç»„æ•°æ®ï¼š bt21.btr
     BinaryTree tree5("./btr26.txt");
-    cout<<"<8>¼üÅÌÊäÈëÒ»¸öÔªËØx£¬ÇóÆäÔÚÊ÷ÖÐµÄ²ã´Î¡£²»´æÔÚÊ±¸ø³öÏàÓ¦ÌáÊ¾ÐÅÏ¢¡£"<<endl;
-    cout<<"µÚÒ»×éÊý¾Ý£º"<<endl;
-    cout<<"ÊäÈëÒ»¸öÔªËØ£º";cin>>t;
-    cout<<"²ãÊýÎª£º"<<tree5.find_level(t)<<endl;
-    cout<<"µÚ¶þ×éÊý¾Ý£º"<<endl;
-    cout<<"ÊäÈëÒ»¸öÔªËØ£º";cin>>t;
-    cout<<"²ãÊýÎª:"<<tree2.find_level(t)<<endl;
+    cout<<"<8>é”®ç›˜è¾“å…¥ä¸€ä¸ªå…ƒç´ xï¼Œæ±‚å…¶åœ¨æ ‘ä¸­çš„å±‚æ¬¡ã€‚ä¸å­˜åœ¨æ—¶ç»™å‡ºç›¸åº”æç¤ºä¿¡æ¯ã€‚"<<endl;
+    cout<<"ç¬¬ä¸€ç»„æ•°æ®ï¼š"<<endl;
+    cout<<"è¾“å…¥ä¸€ä¸ªå…ƒç´ ï¼š";cin>>t;
+    cout<<"å±‚æ•°ä¸ºï¼š"<<tree5.find_level(t)<<endl;
+    cout<<"ç¬¬äºŒç»„æ•°æ®ï¼š"<<endl;
+    cout<<"è¾“å…¥ä¸€ä¸ªå…ƒç´ ï¼š";cin>>t;
+    cout<<"å±‚æ•°ä¸º:"<<tree2.find_level(t)<<endl;
     cout<<endl;
 
-//    <9>½«°´Ë³Ðò·½Ê½´æ´¢ÔÚÊý×éÖÐµÄ¶þ²æÊ÷×ª»»Îª¶þ²æÁ´±íÐÎÊ½¡££¨Êý×éÖÐÒªÀ©Õ¹ÎªÍêÈ«¶þ²æÊ÷£©¡£
-//	ÊµÑé²âÊÔÊý¾Ý»ù±¾ÒªÇó£º
-//    µÚÒ»×éÊý¾Ý£º bt8.btr
-//    µÚ¶þ×éÊý¾Ý£º bt14.btr
+//    <9>å°†æŒ‰é¡ºåºæ–¹å¼å­˜å‚¨åœ¨æ•°ç»„ä¸­çš„äºŒå‰æ ‘è½¬æ¢ä¸ºäºŒå‰é“¾è¡¨å½¢å¼ã€‚ï¼ˆæ•°ç»„ä¸­è¦æ‰©å±•ä¸ºå®Œå…¨äºŒå‰æ ‘ï¼‰ã€‚
+//	å®žéªŒæµ‹è¯•æ•°æ®åŸºæœ¬è¦æ±‚ï¼š
+//    ç¬¬ä¸€ç»„æ•°æ®ï¼š bt8.btr
+//    ç¬¬äºŒç»„æ•°æ®ï¼š bt14.btr
 
 
 
-//<10>½»»»¶þ²æÊ÷ÖÐÃ¿¸ö½áµãµÄ×óÓÒº¢×ÓÖ¸ÕëµÄÖµ¡££¨¼´£º×ó×ÓÊ÷±äÎªÓÒ×ÓÊ÷£¬ÓÒ×ÓÊ÷±äÎª×ó×ÓÊ÷£©¡£
-//	ÊµÑé²âÊÔÊý¾Ý»ù±¾ÒªÇó£º
-//    µÚÒ»×éÊý¾Ý£º bt151.btr
-//    µÚ¶þ×éÊý¾Ý£º bt21.btr
-    cout<<"<10>½»»»¶þ²æÊ÷ÖÐÃ¿¸ö½áµãµÄ×óÓÒº¢×ÓÖ¸ÕëµÄÖµ¡£"<<endl;
-    cout<<"µÚÒ»×éÊý¾Ý£º bt151.btr:"<<endl;
+//<10>äº¤æ¢äºŒå‰æ ‘ä¸­æ¯ä¸ªç»“ç‚¹çš„å·¦å³å­©å­æŒ‡é’ˆçš„å€¼ã€‚ï¼ˆå³ï¼šå·¦å­æ ‘å˜ä¸ºå³å­æ ‘ï¼Œå³å­æ ‘å˜ä¸ºå·¦å­æ ‘ï¼‰ã€‚
+//	å®žéªŒæµ‹è¯•æ•°æ®åŸºæœ¬è¦æ±‚ï¼š
+//    ç¬¬ä¸€ç»„æ•°æ®ï¼š bt151.btr
+//    ç¬¬äºŒç»„æ•°æ®ï¼š bt21.btr
+    cout<<"<10>äº¤æ¢äºŒå‰æ ‘ä¸­æ¯ä¸ªç»“ç‚¹çš„å·¦å³å­©å­æŒ‡é’ˆçš„å€¼ã€‚"<<endl;
+    cout<<"ç¬¬ä¸€ç»„æ•°æ®ï¼š bt151.btr:"<<endl;
     BinaryTree tree6("./btr151.txt");
     tree6.print(2);
     tree6.change_right_left();
     tree6.print(2);
-    cout<<"µÚ¶þ×éÊý¾Ý£º bt21.btr: "<<endl;
+    cout<<"ç¬¬äºŒç»„æ•°æ®ï¼š bt21.btr: "<<endl;
     tree2.print(2);
     tree2.change_right_left();
     tree2.print(2);
     cout<<endl;
 
 
-    cout<<"Ñ¡×öÊµÑé"<<endl;
-//    <11>¸´ÖÆÒ»¿Ã¶þ²æÊ÷Tµ½T1¡£
-//	ÊµÑé²âÊÔÊý¾Ý»ù±¾ÒªÇó£º
-//    µÚÒ»×éÊý¾Ý£º bt151.btr
-//    µÚ¶þ×éÊý¾Ý£º bt21.btr
-    cout<<"<11>¸´ÖÆÒ»¿Ã¶þ²æÊ÷Tµ½T1¡£"<<endl;
-    cout<<"µÚÒ»×éÊý¾Ý£º bt151.btr"<<endl;
+    cout<<"é€‰åšå®žéªŒ"<<endl;
+//    <11>å¤åˆ¶ä¸€æ£µäºŒå‰æ ‘Tåˆ°T1ã€‚
+//	å®žéªŒæµ‹è¯•æ•°æ®åŸºæœ¬è¦æ±‚ï¼š
+//    ç¬¬ä¸€ç»„æ•°æ®ï¼š bt151.btr
+//    ç¬¬äºŒç»„æ•°æ®ï¼š bt21.btr
+    cout<<"<11>å¤åˆ¶ä¸€æ£µäºŒå‰æ ‘Tåˆ°T1ã€‚"<<endl;
+    cout<<"ç¬¬ä¸€ç»„æ•°æ®ï¼š bt151.btr"<<endl;
     BinaryTree tree62(tree6);
     tree62.print(1);
-    cout<<"µÚ¶þ×éÊý¾Ý£ºbt21.btr"<<endl;
+    cout<<"ç¬¬äºŒç»„æ•°æ®ï¼šbt21.btr"<<endl;
     BinaryTree tree22(tree2);
     tree22.print(1);
     cout<<endl;
-//    <12>Êä³ö¶þ²æÊ÷´ÓÃ¿¸öÒ¶×Ó½áµãµ½¸ù½áµãµÄÂ·¾¶£¨¾­ÀúµÄ½áµã£©¡£
-//    µÚÒ»×éÊý¾Ý£º bt261.btr
-//    µÚ¶þ×éÊý¾Ý£º bt21.btr
-    cout<<"<12>Êä³ö¶þ²æÊ÷´ÓÃ¿¸öÒ¶×Ó½áµãµ½¸ù½áµãµÄÂ·¾¶£¨¾­ÀúµÄ½áµã£©¡£"<<endl;
-    cout<<"µÚÒ»×éÊý¾Ý£º bt261.btr"<<endl;
+//    <12>è¾“å‡ºäºŒå‰æ ‘ä»Žæ¯ä¸ªå¶å­ç»“ç‚¹åˆ°æ ¹ç»“ç‚¹çš„è·¯å¾„ï¼ˆç»åŽ†çš„ç»“ç‚¹ï¼‰ã€‚
+//    ç¬¬ä¸€ç»„æ•°æ®ï¼š bt261.btr
+//    ç¬¬äºŒç»„æ•°æ®ï¼š bt21.btr
+    cout<<"<12>è¾“å‡ºäºŒå‰æ ‘ä»Žæ¯ä¸ªå¶å­ç»“ç‚¹åˆ°æ ¹ç»“ç‚¹çš„è·¯å¾„ï¼ˆç»åŽ†çš„ç»“ç‚¹ï¼‰ã€‚"<<endl;
+    cout<<"ç¬¬ä¸€ç»„æ•°æ®ï¼š bt261.btr"<<endl;
     tree3.leaves2root();
-    cout<<"µÚ¶þ×éÊý¾Ý£º bt21.btr"<<endl;
+    cout<<"ç¬¬äºŒç»„æ•°æ®ï¼š bt21.btr"<<endl;
     tree2.change_right_left();
     tree2.leaves2root();
     cout<<endl;
 
-//    <13>¶Ô¶þ²æÁ´±í±íÊ¾µÄ¶þ²æÊ÷£¬°´´ÓÉÏµ½ÏÂ£¬´Ó×óµ½ÓÒ´òÓ¡½áµãÖµ£¬
-//    ¼´°´²ã´Î´òÓ¡¡££¨ÌáÊ¾£ºÐèÒªÊ¹ÓÃ¶ÓÁÐ£©
-//    µÚÒ»×éÊý¾Ý£º bt261.btr
-//    µÚ¶þ×éÊý¾Ý£º bt21.btr
+//    <13>å¯¹äºŒå‰é“¾è¡¨è¡¨ç¤ºçš„äºŒå‰æ ‘ï¼ŒæŒ‰ä»Žä¸Šåˆ°ä¸‹ï¼Œä»Žå·¦åˆ°å³æ‰“å°ç»“ç‚¹å€¼ï¼Œ
+//    å³æŒ‰å±‚æ¬¡æ‰“å°ã€‚ï¼ˆæç¤ºï¼šéœ€è¦ä½¿ç”¨é˜Ÿåˆ—ï¼‰
+//    ç¬¬ä¸€ç»„æ•°æ®ï¼š bt261.btr
+//    ç¬¬äºŒç»„æ•°æ®ï¼š bt21.btr
 
-    cout<<"<13>¶Ô¶þ²æÁ´±í±íÊ¾µÄ¶þ²æÊ÷,°´²ã´Î´òÓ¡½Úµã"<<endl;
-    cout<<"µÚÒ»×éÊý¾Ý£º bt261.btr"<<endl;
+    cout<<"<13>å¯¹äºŒå‰é“¾è¡¨è¡¨ç¤ºçš„äºŒå‰æ ‘,æŒ‰å±‚æ¬¡æ‰“å°èŠ‚ç‚¹"<<endl;
+    cout<<"ç¬¬ä¸€ç»„æ•°æ®ï¼š bt261.btr"<<endl;
     tree3.print_by_level();
-    cout<<"µÚ¶þ×éÊý¾Ý£º bt21.btr"<<endl;
+    cout<<"ç¬¬äºŒç»„æ•°æ®ï¼š bt21.btr"<<endl;
     tree2.print_by_level();
     cout<<endl;
 
-//    <14>¶Ô¶þ²æÁ´±í±íÊ¾µÄ¶þ²æÊ÷£¬Çó2¸ö½áµã×î½üµÄ¹²Í¬×æÏÈ¡£
-//    µÚÒ»×éÊý¾Ý£º bt261.btr
-//    µÚ¶þ×éÊý¾Ý£º bt21.btr
-    cout<<"<14>¶Ô¶þ²æÁ´±í±íÊ¾µÄ¶þ²æÊ÷£¬Çó2¸ö½áµã×î½üµÄ¹²Í¬×æÏÈ¡£"<<endl;
-    cout<<"µÚÒ»×éÊý¾Ý£º bt261.btr"<<endl;
+//    <14>å¯¹äºŒå‰é“¾è¡¨è¡¨ç¤ºçš„äºŒå‰æ ‘ï¼Œæ±‚2ä¸ªç»“ç‚¹æœ€è¿‘çš„å…±åŒç¥–å…ˆã€‚
+//    ç¬¬ä¸€ç»„æ•°æ®ï¼š bt261.btr
+//    ç¬¬äºŒç»„æ•°æ®ï¼š bt21.btr
+    cout<<"<14>å¯¹äºŒå‰é“¾è¡¨è¡¨ç¤ºçš„äºŒå‰æ ‘ï¼Œæ±‚2ä¸ªç»“ç‚¹æœ€è¿‘çš„å…±åŒç¥–å…ˆã€‚"<<endl;
+    cout<<"ç¬¬ä¸€ç»„æ•°æ®ï¼š bt261.btr"<<endl;
     cout<<tree3.near_common_ancestor('l','e')<<endl;
-    cout<<"µÚ¶þ×éÊý¾Ý£º bt21.btr"<<endl;
+    cout<<"ç¬¬äºŒç»„æ•°æ®ï¼š bt21.btr"<<endl;
     cout<<tree2.near_common_ancestor('u','m')<<endl;
     cout<<endl;
 
-//    <15>Çó¶þ²æÊ÷ÖÐÒ»Ìõ×î³¤µÄÂ·¾¶³¤¶È£¨±ßÊý£©£¬²¢Êä³öÂ·¾¶ÉÏµÄ¸ö½áµãÖµ¡£
-//    µÚÒ»×éÊý¾Ý£º bt261.btr
-//    µÚ¶þ×éÊý¾Ý£º bt21.btr
-    cout<<"<15>Çó¶þ²æÊ÷ÖÐÒ»Ìõ×î³¤µÄÂ·¾¶³¤¶È£¨±ßÊý£©£¬²¢Êä³öÂ·¾¶ÉÏµÄ¸ö½áµãÖµ¡£"<<endl;
-    cout<<"µÚÒ»×éÊý¾Ý£º bt261.btr"<<endl;
+//    <15>æ±‚äºŒå‰æ ‘ä¸­ä¸€æ¡æœ€é•¿çš„è·¯å¾„é•¿åº¦ï¼ˆè¾¹æ•°ï¼‰ï¼Œå¹¶è¾“å‡ºè·¯å¾„ä¸Šçš„ä¸ªç»“ç‚¹å€¼ã€‚
+//    ç¬¬ä¸€ç»„æ•°æ®ï¼š bt261.btr
+//    ç¬¬äºŒç»„æ•°æ®ï¼š bt21.btr
+    cout<<"<15>æ±‚äºŒå‰æ ‘ä¸­ä¸€æ¡æœ€é•¿çš„è·¯å¾„é•¿åº¦ï¼ˆè¾¹æ•°ï¼‰ï¼Œå¹¶è¾“å‡ºè·¯å¾„ä¸Šçš„ä¸ªç»“ç‚¹å€¼ã€‚"<<endl;
+    cout<<"ç¬¬ä¸€ç»„æ•°æ®ï¼š bt261.btr"<<endl;
     tree3.leaves2root(true);
-    cout<<"µÚ¶þ×éÊý¾Ý£º bt21.btr"<<endl;
+    cout<<"ç¬¬äºŒç»„æ•°æ®ï¼š bt21.btr"<<endl;
     tree2.leaves2root(true);
     cout<<endl;
 
