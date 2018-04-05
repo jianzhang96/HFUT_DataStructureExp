@@ -1,3 +1,15 @@
+/**
+ *Copyright:
+ *This code is free software; you can redistribute it and/or modify
+ *it under the terms of the GPL-3.0
+ *
+ * @author zhangjian
+ * @date 2017.11
+ *
+ */
+
+///////////////////////////////////////////////////////////////////////
+
 #include "BinaryTree.h"
 #include <sstream>
 
@@ -12,7 +24,7 @@ BinaryTree::BinaryTree(string filepath)
 
     ifstream fin(filepath);
     if(fin.fail()){
-        cout<<"´ò¿ªÎÄ¼şÊ§°Ü£¡"<<endl;
+        cout<<"æ‰“å¼€æ–‡ä»¶å¤±è´¥ï¼"<<endl;
         root=nullptr;
     }
     else{
@@ -51,7 +63,7 @@ void BinaryTree::creat_node(node*& pt,node * pc)
     if(pc->left) creat_node(pt->left,pc->left);
     if(pc->right) creat_node(pt->right,pc->right);
 }
-//Êä³ö±éÀú
+//è¾“å‡ºéå†
 void BinaryTree::preorder_show(node * t)
 {
     cout<<t->data<<' ';
@@ -166,39 +178,39 @@ void BinaryTree::find_father(node*& res,Type c,node* pt)
 
 void BinaryTree::about_x(Type x)
 {
-    //¸¸½Úµã
+    //çˆ¶èŠ‚ç‚¹
     node *fat;
     find_father(fat,x);
     if(fat==nullptr) {
-        cout<<"¸Ã½ÚµãÊÇ¸ù½Úµã;";
+        cout<<"è¯¥èŠ‚ç‚¹æ˜¯æ ¹èŠ‚ç‚¹;";
         fat=root;
     }
-    else cout<<"¸Ã½ÚµãµÄ¸¸½ÚµãµÄÖµÎª£º"<<fat->data<<";";
+    else cout<<"è¯¥èŠ‚ç‚¹çš„çˆ¶èŠ‚ç‚¹çš„å€¼ä¸ºï¼š"<<fat->data<<";";
 
-    //ĞÖµÜ½Úµã
+    //å…„å¼ŸèŠ‚ç‚¹
     if(fat&&fat->left&&fat->left->data==x){
-        if(fat->right) cout<<"¸Ã½ÚµãµÄÓÒĞÖµÜµÄÖµÎª£º"<<fat->right->data<<";";
-        else cout<<"¸Ã½ÚµãÃ»ÓĞÓÒĞÖµÜ;";
+        if(fat->right) cout<<"è¯¥èŠ‚ç‚¹çš„å³å…„å¼Ÿçš„å€¼ä¸ºï¼š"<<fat->right->data<<";";
+        else cout<<"è¯¥èŠ‚ç‚¹æ²¡æœ‰å³å…„å¼Ÿ;";
 
 
-        //º¢×Ó½Úµã
-        if(fat->left->left) cout<<"×óº¢×ÓµÄÖµÎª£º"<<fat->left->left->data<<";";
-        else cout<<"Ã»ÓĞ×óº¢×Ó;";
+        //å­©å­èŠ‚ç‚¹
+        if(fat->left->left) cout<<"å·¦å­©å­çš„å€¼ä¸ºï¼š"<<fat->left->left->data<<";";
+        else cout<<"æ²¡æœ‰å·¦å­©å­;";
 
-        if(fat->left->right) cout<<"ÓÒº¢×ÓµÄÖµÎª£º"<<fat->left->right->data<<";";
-        else cout<<"Ã»ÓĞÓÒº¢×Ó;";
+        if(fat->left->right) cout<<"å³å­©å­çš„å€¼ä¸ºï¼š"<<fat->left->right->data<<";";
+        else cout<<"æ²¡æœ‰å³å­©å­;";
 
     }
     else{
-        if(fat->left) cout<<"¸Ã½ÚµãµÄ×óĞÖµÜµÄÖµÎª£º"<<fat->left->data<<";";
-        else cout<<"¸Ã½ÚµãÃ»ÓĞ×óĞÖµÜ;";
+        if(fat->left) cout<<"è¯¥èŠ‚ç‚¹çš„å·¦å…„å¼Ÿçš„å€¼ä¸ºï¼š"<<fat->left->data<<";";
+        else cout<<"è¯¥èŠ‚ç‚¹æ²¡æœ‰å·¦å…„å¼Ÿ;";
 
-          //º¢×Ó½Úµã
-        if(fat->right->left) cout<<"×óº¢×ÓµÄÖµÎª£º"<<fat->right->left->data<<";";
-        else cout<<"Ã»ÓĞ×óº¢×Ó;";
+          //å­©å­èŠ‚ç‚¹
+        if(fat->right->left) cout<<"å·¦å­©å­çš„å€¼ä¸ºï¼š"<<fat->right->left->data<<";";
+        else cout<<"æ²¡æœ‰å·¦å­©å­;";
 
-        if(fat->right->right) cout<<"ÓÒº¢×ÓµÄÖµÎª£º"<<fat->right->right->data<<";";
-        else cout<<"Ã»ÓĞÓÒº¢×Ó;";
+        if(fat->right->right) cout<<"å³å­©å­çš„å€¼ä¸ºï¼š"<<fat->right->right->data<<";";
+        else cout<<"æ²¡æœ‰å³å­©å­;";
     }
 
 }
@@ -239,10 +251,10 @@ void BinaryTree::leaves2root(bool longest,node* pt,string path)
     if(!pt->left&&!pt->right) {
         if(longest){
             if(find_level(pt->data)==height())
-                cout<<pt->data<<"£»"<<path<<endl;
+                cout<<pt->data<<"ï¼›"<<path<<endl;
         }
         else
-            cout<<pt->data<<"£»"<<path<<endl;
+            cout<<pt->data<<"ï¼›"<<path<<endl;
     }
     else{
         stringstream sinout;
@@ -291,7 +303,7 @@ Type BinaryTree::near_common_ancestor(Type a,Type b)
     }
     return fat1->data;
 }
-//ÏÂÃæÊÇÅÅĞòÊ÷Ëã·¨µÄÊµÏÖ
+//ä¸‹é¢æ˜¯æ’åºæ ‘ç®—æ³•çš„å®ç°
 BinaryTree::BinaryTree(Type a[],int n,bool avl)
 {
     root=nullptr;
@@ -312,11 +324,11 @@ void BinaryTree::insert(node*&pt,Type x)
 BinaryTree::node* BinaryTree::search_sort(node*pt,Type x,bool prt)
 {
     if(pt==nullptr) {
-        if(prt) cout<<": ²éÕÒÊ§°Ü"<<x<<endl;
+        if(prt) cout<<": æŸ¥æ‰¾å¤±è´¥"<<x<<endl;
         return nullptr;
     }
     if(pt->data==x) {
-        if(prt) cout<<": ²éÕÒ³É¹¦"<<x<<endl;
+        if(prt) cout<<": æŸ¥æ‰¾æˆåŠŸ"<<x<<endl;
         return pt;
     }
     else{
@@ -367,7 +379,7 @@ void BinaryTree::search(Type x)
     search_sort(root,x);
 }
 
-//AVLÊ÷µÄ·½·¨
+//AVLæ ‘çš„æ–¹æ³•
 int BinaryTree::height_avl(node * pnode)
 {
     if (pnode != nullptr)
@@ -382,8 +394,8 @@ BinaryTree::node* BinaryTree::leftRotation(node* proot)
     proot->right = prchild->left;
     prchild->left = proot;
 
-    proot->height = max(height_avl(proot->left),height_avl(proot->right))+1;     //¸üĞÂ½ÚµãµÄ¸ß¶ÈÖµ
-    prchild->height = max(height_avl(prchild->left), height_avl(prchild->right)) + 1; //¸üĞÂ½ÚµãµÄ¸ß¶ÈÖµ
+    proot->height = max(height_avl(proot->left),height_avl(proot->right))+1;     //æ›´æ–°èŠ‚ç‚¹çš„é«˜åº¦å€¼
+    prchild->height = max(height_avl(prchild->left), height_avl(prchild->right)) + 1; //æ›´æ–°èŠ‚ç‚¹çš„é«˜åº¦å€¼
     return prchild;
 }
 BinaryTree::node* BinaryTree::rightRotation(node* proot)
@@ -392,8 +404,8 @@ BinaryTree::node* BinaryTree::rightRotation(node* proot)
     proot->left = plchild->right;
     plchild->right = proot;
 
-    proot->height = max(height_avl(proot->left),height_avl(proot->right))+1;     //¸üĞÂ½ÚµãµÄ¸ß¶ÈÖµ
-    plchild->height = max(height_avl(plchild->left), height_avl(plchild->right)) + 1; //¸üĞÂ½ÚµãµÄ¸ß¶ÈÖµ
+    proot->height = max(height_avl(proot->left),height_avl(proot->right))+1;     //æ›´æ–°èŠ‚ç‚¹çš„é«˜åº¦å€¼
+    plchild->height = max(height_avl(plchild->left), height_avl(plchild->right)) + 1; //æ›´æ–°èŠ‚ç‚¹çš„é«˜åº¦å€¼
 
     return plchild;
 }
@@ -409,32 +421,32 @@ BinaryTree::node* BinaryTree::leftRightRotation(node* proot)
 }
 BinaryTree::node* BinaryTree::insert_avl(node*&pnode,Type key)
 {
-    if (pnode == nullptr)    //Ñ°ÕÒµ½²åÈëµÄÎ»ÖÃ
+    if (pnode == nullptr)    //å¯»æ‰¾åˆ°æ’å…¥çš„ä½ç½®
     {
         pnode = new node;
         pnode->data=key;
         pnode->left=pnode->right=nullptr;
     }
-    else if (key > pnode->data)    //²åÈëÖµ±Èµ±Ç°½áµãÖµ´ó£¬²åÈëµ½µ±Ç°½áµãµÄÓÒ×ÓÊ÷ÉÏ
+    else if (key > pnode->data)    //æ’å…¥å€¼æ¯”å½“å‰ç»“ç‚¹å€¼å¤§ï¼Œæ’å…¥åˆ°å½“å‰ç»“ç‚¹çš„å³å­æ ‘ä¸Š
     {
         pnode->right = insert_avl(pnode->right, key);
-        if (height_avl(pnode->right) - height_avl(pnode->left) == 2) //²åÈëºó³öÏÖÊ§ºâ
+        if (height_avl(pnode->right) - height_avl(pnode->left) == 2) //æ’å…¥åå‡ºç°å¤±è¡¡
         {
-            if (key > pnode->right->data) //Çé¿öÒ»£º²åÈëÓÒ×ÓÊ÷µÄÓÒ½Úµã£¬½øĞĞ×óĞı
+            if (key > pnode->right->data) //æƒ…å†µä¸€ï¼šæ’å…¥å³å­æ ‘çš„å³èŠ‚ç‚¹ï¼Œè¿›è¡Œå·¦æ—‹
                 pnode=leftRotation(pnode);
-            else if (key < pnode->right->data)  //Çé¿öÈı£º²åÈëÓÒ×ÓÊ÷µÄ×ó½Úµã,½øĞĞÏÈÓÒÔÙ×óĞı×ª
+            else if (key < pnode->right->data)  //æƒ…å†µä¸‰ï¼šæ’å…¥å³å­æ ‘çš„å·¦èŠ‚ç‚¹,è¿›è¡Œå…ˆå³å†å·¦æ—‹è½¬
                 pnode=rightLeftRotation(pnode);
         }
     }
-    else if (key < pnode->data) //²åÈëÖµ±Èµ±Ç°½ÚµãÖµĞ¡£¬²åÈëµ½µ±Ç°½áµãµÄ×ó×ÓÊ÷ÉÏ
+    else if (key < pnode->data) //æ’å…¥å€¼æ¯”å½“å‰èŠ‚ç‚¹å€¼å°ï¼Œæ’å…¥åˆ°å½“å‰ç»“ç‚¹çš„å·¦å­æ ‘ä¸Š
     {
         pnode->left = insert_avl(pnode->left, key);
-        if (height_avl(pnode->left) - height_avl(pnode->right) == 2) //Èç¹û²åÈëµ¼ÖÂÊ§ºâ
+        if (height_avl(pnode->left) - height_avl(pnode->right) == 2) //å¦‚æœæ’å…¥å¯¼è‡´å¤±è¡¡
         {
-            if (key < pnode->left->data)        //Çé¿ö¶ş£º²åÈëµ½×ó×ÓÊ÷µÄ×óº¢×Ó½ÚµãÉÏ£¬½øĞĞÓÒĞı
+            if (key < pnode->left->data)        //æƒ…å†µäºŒï¼šæ’å…¥åˆ°å·¦å­æ ‘çš„å·¦å­©å­èŠ‚ç‚¹ä¸Šï¼Œè¿›è¡Œå³æ—‹
                 pnode = rightRotation(pnode);
             else if (key>pnode->left->data)
-                pnode = leftRightRotation(pnode);//Çé¿öËÄ£º²åÈëµ½×ó×ÓÊ÷µÄÓÒº¢×Ó½ÚµãÉÏ£¬½øĞĞÏÈ×óºóÓÒĞı×ª
+                pnode = leftRightRotation(pnode);//æƒ…å†µå››ï¼šæ’å…¥åˆ°å·¦å­æ ‘çš„å³å­©å­èŠ‚ç‚¹ä¸Šï¼Œè¿›è¡Œå…ˆå·¦åå³æ—‹è½¬
         }
     }
     pnode->height= max(height_avl(pnode->left), height_avl(pnode->right)) + 1;
@@ -445,25 +457,25 @@ BinaryTree::node* BinaryTree::remove_avl(node*&pnode,Type key)
 {
     if (pnode != nullptr)
     {
-        if (key == pnode->data)            //ÕÒµ½É¾³ıµÄ½Úµã
+        if (key == pnode->data)            //æ‰¾åˆ°åˆ é™¤çš„èŠ‚ç‚¹
         {
-            //ÒòAVLÒ²ÊÇ¶ş²æÅÅĞòÊ÷£¬É¾³ı½ÚµãÒªÎ¬»¤Æä¶ş²æÅÅĞòÊ÷µÄÌõ¼ş
-            if (pnode->left != nullptr&&pnode->right != nullptr)        //Èô×óÓÒ¶¼²»Îª¿Õ
+            //å› AVLä¹Ÿæ˜¯äºŒå‰æ’åºæ ‘ï¼Œåˆ é™¤èŠ‚ç‚¹è¦ç»´æŠ¤å…¶äºŒå‰æ’åºæ ‘çš„æ¡ä»¶
+            if (pnode->left != nullptr&&pnode->right != nullptr)        //è‹¥å·¦å³éƒ½ä¸ä¸ºç©º
             {
-                // ×ó×ÓÊ÷±ÈÓÒ×ÓÊ÷¸ß,ÔÚ×ó×ÓÊ÷ÉÏÑ¡Ôñ½Úµã½øĞĞÌæ»»
+                // å·¦å­æ ‘æ¯”å³å­æ ‘é«˜,åœ¨å·¦å­æ ‘ä¸Šé€‰æ‹©èŠ‚ç‚¹è¿›è¡Œæ›¿æ¢
                 if (height_avl(pnode->left) > height_avl(pnode->right))
                 {
-                    //Ê¹ÓÃ×ó×ÓÊ÷×î´ó½ÚµãÀ´´úÌæ±»É¾½Úµã£¬¶øÉ¾³ı¸Ã×î´ó½Úµã
-                    node* ppre = maximum(pnode->left);        //×ó×ÓÊ÷×î´ó½Úµã
-                    pnode->data = ppre->data;                                //½«×î´ó½ÚµãµÄÖµ¸²¸Çµ±Ç°½áµã
-                    pnode->left = remove_avl(pnode->left, ppre->data);    //µİ¹éµØÉ¾³ı×î´ó½Úµã
+                    //ä½¿ç”¨å·¦å­æ ‘æœ€å¤§èŠ‚ç‚¹æ¥ä»£æ›¿è¢«åˆ èŠ‚ç‚¹ï¼Œè€Œåˆ é™¤è¯¥æœ€å¤§èŠ‚ç‚¹
+                    node* ppre = maximum(pnode->left);        //å·¦å­æ ‘æœ€å¤§èŠ‚ç‚¹
+                    pnode->data = ppre->data;                                //å°†æœ€å¤§èŠ‚ç‚¹çš„å€¼è¦†ç›–å½“å‰ç»“ç‚¹
+                    pnode->left = remove_avl(pnode->left, ppre->data);    //é€’å½’åœ°åˆ é™¤æœ€å¤§èŠ‚ç‚¹
                 }
-                else  //ÔÚÓÒ×ÓÊ÷ÉÏÑ¡Ôñ½Úµã½øĞĞÌæ»»
+                else  //åœ¨å³å­æ ‘ä¸Šé€‰æ‹©èŠ‚ç‚¹è¿›è¡Œæ›¿æ¢
                 {
-                    //Ê¹ÓÃ×îĞ¡½ÚµãÀ´´úÌæ±»É¾½Úµã£¬¶øÉ¾³ı¸Ã×îĞ¡½Úµã
-                    node* psuc = minimum(pnode->right);        //ÓÒ×ÓÊ÷µÄ×îĞ¡½Úµã
-                    pnode->data = psuc->data;                                //½«×îĞ¡½ÚµãÖµ¸²¸Çµ±Ç°½áµã
-                    pnode->right = remove_avl(pnode->right, psuc->data);    //µİ¹éµØÉ¾³ı×îĞ¡½Úµã
+                    //ä½¿ç”¨æœ€å°èŠ‚ç‚¹æ¥ä»£æ›¿è¢«åˆ èŠ‚ç‚¹ï¼Œè€Œåˆ é™¤è¯¥æœ€å°èŠ‚ç‚¹
+                    node* psuc = minimum(pnode->right);        //å³å­æ ‘çš„æœ€å°èŠ‚ç‚¹
+                    pnode->data = psuc->data;                                //å°†æœ€å°èŠ‚ç‚¹å€¼è¦†ç›–å½“å‰ç»“ç‚¹
+                    pnode->right = remove_avl(pnode->right, psuc->data);    //é€’å½’åœ°åˆ é™¤æœ€å°èŠ‚ç‚¹
                 }
 
             }
@@ -479,29 +491,29 @@ BinaryTree::node* BinaryTree::remove_avl(node*&pnode,Type key)
             }
 
         }
-        else if (key > pnode->data)//ÒªÉ¾³ıµÄ½Úµã±Èµ±Ç°½Úµã´ó£¬ÔòÔÚÓÒ×ÓÊ÷½øĞĞÉ¾³ı
+        else if (key > pnode->data)//è¦åˆ é™¤çš„èŠ‚ç‚¹æ¯”å½“å‰èŠ‚ç‚¹å¤§ï¼Œåˆ™åœ¨å³å­æ ‘è¿›è¡Œåˆ é™¤
         {
             pnode->right =  remove_avl(pnode->right, key);
-            //É¾³ıÓÒ×ÓÊ÷½Úµãµ¼ÖÂ²»Æ½ºâ:Ïàµ±ÓÚÇé¿ö¶ş»òÇé¿öËÄ
+            //åˆ é™¤å³å­æ ‘èŠ‚ç‚¹å¯¼è‡´ä¸å¹³è¡¡:ç›¸å½“äºæƒ…å†µäºŒæˆ–æƒ…å†µå››
             if (height_avl(pnode->left) - height_avl(pnode->right) == 2)
             {
-                //Ïàµ±ÓÚÔÚ×ó×ÓÊ÷ÉÏ²åÈëÓÒ½ÚµãÔì³ÉµÄÊ§ºâ£¨Çé¿öËÄ£©
+                //ç›¸å½“äºåœ¨å·¦å­æ ‘ä¸Šæ’å…¥å³èŠ‚ç‚¹é€ æˆçš„å¤±è¡¡ï¼ˆæƒ…å†µå››ï¼‰
                 if (height_avl(pnode->left->right)>height_avl(pnode->left->left))
                     pnode = leftRightRotation(pnode);
-                else//Ïàµ±ÓÚÔÚ×ó×ÓÊ÷ÉÏ²åÈë×ó½ÚµãÔì³ÉµÄÊ§ºâ£¨Çé¿ö¶ş£©
+                else//ç›¸å½“äºåœ¨å·¦å­æ ‘ä¸Šæ’å…¥å·¦èŠ‚ç‚¹é€ æˆçš„å¤±è¡¡ï¼ˆæƒ…å†µäºŒï¼‰
                     pnode = rightRotation(pnode);
             }
         }
-        else if (key < pnode->data)//ÒªÉ¾³ıµÄ½Úµã±Èµ±Ç°½ÚµãĞ¡£¬ÔòÔÚ×ó×ÓÊ÷½øĞĞÉ¾³ı
+        else if (key < pnode->data)//è¦åˆ é™¤çš„èŠ‚ç‚¹æ¯”å½“å‰èŠ‚ç‚¹å°ï¼Œåˆ™åœ¨å·¦å­æ ‘è¿›è¡Œåˆ é™¤
         {
             pnode->left= remove_avl(pnode->left, key);
-             //É¾³ı×ó×ÓÊ÷½Úµãµ¼ÖÂ²»Æ½ºâ£ºÏàµ±ÓÚÇé¿öÈı»òÇé¿öÒ»
+             //åˆ é™¤å·¦å­æ ‘èŠ‚ç‚¹å¯¼è‡´ä¸å¹³è¡¡ï¼šç›¸å½“äºæƒ…å†µä¸‰æˆ–æƒ…å†µä¸€
             if (height_avl(pnode->right) - height_avl(pnode->left) == 2)
             {
-                //Ïàµ±ÓÚÔÚÓÒ×ÓÊ÷ÉÏ²åÈë×ó½ÚµãÔì³ÉµÄÊ§ºâ£¨Çé¿öÈı£©
+                //ç›¸å½“äºåœ¨å³å­æ ‘ä¸Šæ’å…¥å·¦èŠ‚ç‚¹é€ æˆçš„å¤±è¡¡ï¼ˆæƒ…å†µä¸‰ï¼‰
                 if (height_avl(pnode->right->left)>height_avl(pnode->right->right))
                     pnode = rightLeftRotation(pnode);
-                else//Ïàµ±ÓÚÔÚÓÒ×ÓÊ÷ÉÏ²åÈëÓÒ½ÚµãÔì³ÉµÄÊ§ºâ£¨Çé¿öÒ»£©
+                else//ç›¸å½“äºåœ¨å³å­æ ‘ä¸Šæ’å…¥å³èŠ‚ç‚¹é€ æˆçš„å¤±è¡¡ï¼ˆæƒ…å†µä¸€ï¼‰
                     pnode = leftRotation(pnode);
             }
         }
