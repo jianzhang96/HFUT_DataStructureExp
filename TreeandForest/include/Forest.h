@@ -1,3 +1,15 @@
+/**
+ *Copyright:
+ *This code is free software; you can redistribute it and/or modify
+ *it under the terms of the GPL-3.0
+ *
+ * @author zhangjian
+ * @date 2017.11
+ *
+ */
+
+///////////////////////////////////////////////////////////////////////
+
 #ifndef FOREST_H
 #define FOREST_H
 
@@ -10,13 +22,13 @@ using namespace std;
 class Forest
 {
     private:
-        //Ë«Ç×±íÊ¾·¨Êı¾İ½á¹¹
+        //åŒäº²è¡¨ç¤ºæ³•æ•°æ®ç»“æ„
         struct pnode
         {
             char data;
             int parent;
         };
-        //º¢×ÓĞÖµÜÁ´±í±íÊ¾·¨½Úµã
+        //å­©å­å…„å¼Ÿé“¾è¡¨è¡¨ç¤ºæ³•èŠ‚ç‚¹
         struct csNode
         {
             char data;
