@@ -21,9 +21,9 @@ class SeqList
 {
 private:
 public:
-    #ifdef DA   //ÊµÏÖÒ»¸ö¶¯Ì¬Êý×éµÄ°æ±¾
+    #ifdef DA   //定义动态分配内存版本
     Type *data;
-    int size; //¼ÇÂ¼¶¯Ì¬Êý×éµ±Ç°³¤¶È
+    int size; //堆数组长度
     #else
     Type data[MAXLEN];
     #endif // DA
