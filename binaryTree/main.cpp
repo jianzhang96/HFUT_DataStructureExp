@@ -11,7 +11,7 @@
 ///////////////////////////////////////////////////////////////////////
 
 #include<iostream>
-#include "BinaryTree.h"
+#include "./include/BinaryTree.h"
 
 //#define BIN_EXP
 

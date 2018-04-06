@@ -10,7 +10,7 @@
 
 ///////////////////////////////////////////////////////////////////////
 
-#include "BinaryTree.h"
+#include "../include/BinaryTree.h"
 #include <sstream>
 
 BinaryTree::BinaryTree()
