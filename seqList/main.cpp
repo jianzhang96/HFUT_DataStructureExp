@@ -31,67 +31,67 @@ int main()
 
     int a[]={1,2,3,4,5,6,7,8,9,10,33,2,5,90};
     SeqList c(a,14);
-    //<1>ÇóË³Ðò±íÖÐµÚi¸öÔªËØ£¨º¯Êý£©£¬Èô²»´æÔÚ£¬±¨´í¡£
-    //µÚÒ»×éÊý¾Ý£ºË³Ðò±í³¤¶Èn¡Ý10£¬i·Ö±ðÎª5£¬n£¬0£¬n+1£¬n+2
-    //µÚ¶þ×éÊý¾Ý£ºË³Ðò±í³¤¶Èn=0£¬i·Ö±ðÎª0£¬2
-    cout<<"<1>ÇóË³Ðò±íÖÐµÚi¸öÔªËØ£¨º¯Êý£©£¬Èô²»´æÔÚ£¬±¨´í¡£"<<endl;
+    //<1>æ±‚é¡ºåºè¡¨ä¸­ç¬¬iä¸ªå…ƒç´ ï¼ˆå‡½æ•°ï¼‰ï¼Œè‹¥ä¸å­˜åœ¨ï¼ŒæŠ¥é”™ã€‚
+    //ç¬¬ä¸€ç»„æ•°æ®ï¼šé¡ºåºè¡¨é•¿åº¦nâ‰¥10ï¼Œiåˆ†åˆ«ä¸º5ï¼Œnï¼Œ0ï¼Œn+1ï¼Œn+2
+    //ç¬¬äºŒç»„æ•°æ®ï¼šé¡ºåºè¡¨é•¿åº¦n=0ï¼Œiåˆ†åˆ«ä¸º0ï¼Œ2
+    cout<<"<1>æ±‚é¡ºåºè¡¨ä¸­ç¬¬iä¸ªå…ƒç´ ï¼ˆå‡½æ•°ï¼‰ï¼Œè‹¥ä¸å­˜åœ¨ï¼ŒæŠ¥é”™ã€‚"<<endl;
     c.showSeqList();
     int e[]={5,14,0,15,16};
     int x;
     for(int i=0;i<5;i++)
     {
-        if(c.getElement(e[i],x)) cout<<e[i]<<"¶ÔÓ¦µÄÔªËØÎª£º"<<x<<endl;
-        else cout<<e[i]<<"Ë÷ÒýµÄÔªËØ²»´æÔÚ"<<endl;
+        if(c.getElement(e[i],x)) cout<<e[i]<<"å¯¹åº”çš„å…ƒç´ ä¸ºï¼š"<<x<<endl;
+        else cout<<e[i]<<"ç´¢å¼•çš„å…ƒç´ ä¸å­˜åœ¨"<<endl;
     }
 
     cout<<endl;
     c.clearSeqList();
     c.showSeqList();
-    if(c.getElement(0,x)) cout<<0<<"¶ÔÓ¦µÄÔªËØÎª£º"<<x<<endl;
-    else cout<<0<<"Ë÷ÒýµÄÔªËØ²»´æÔÚ"<<endl;
+    if(c.getElement(0,x)) cout<<0<<"å¯¹åº”çš„å…ƒç´ ä¸ºï¼š"<<x<<endl;
+    else cout<<0<<"ç´¢å¼•çš„å…ƒç´ ä¸å­˜åœ¨"<<endl;
 
-    if(c.getElement(2,x)) cout<<2<<"¶ÔÓ¦µÄÔªËØÎª£º"<<x<<endl;
-    else cout<<2<<"Ë÷ÒýµÄÔªËØ²»´æÔÚ"<<endl;
+    if(c.getElement(2,x)) cout<<2<<"å¯¹åº”çš„å…ƒç´ ä¸ºï¼š"<<x<<endl;
+    else cout<<2<<"ç´¢å¼•çš„å…ƒç´ ä¸å­˜åœ¨"<<endl;
 
 
-//    <2>ÔÚµÚi¸ö½áµãÇ°²åÈëÖµÎªxµÄ½áµã¡£
-//    ÊµÑé²âÊÔÊý¾Ý»ù±¾ÒªÇó£º
-//    µÚÒ»×éÊý¾Ý£ºË³Ðò±í³¤¶Èn¡Ý10£¬x=100,  i·Ö±ðÎª5,n,n+1,0,1,n+2
-//    µÚ¶þ×éÊý¾Ý£ºË³Ðò±í³¤¶Èn=0£¬x=100£¬i=5
-    cout<<endl<<"<2>ÔÚµÚi¸ö½áµãÇ°²åÈëÖµÎªxµÄ½áµã¡£"<<endl;
+//    <2>åœ¨ç¬¬iä¸ªç»“ç‚¹å‰æ’å…¥å€¼ä¸ºxçš„ç»“ç‚¹ã€‚
+//    å®žéªŒæµ‹è¯•æ•°æ®åŸºæœ¬è¦æ±‚ï¼š
+//    ç¬¬ä¸€ç»„æ•°æ®ï¼šé¡ºåºè¡¨é•¿åº¦nâ‰¥10ï¼Œx=100,  iåˆ†åˆ«ä¸º5,n,n+1,0,1,n+2
+//    ç¬¬äºŒç»„æ•°æ®ï¼šé¡ºåºè¡¨é•¿åº¦n=0ï¼Œx=100ï¼Œi=5
+    cout<<endl<<"<2>åœ¨ç¬¬iä¸ªç»“ç‚¹å‰æ’å…¥å€¼ä¸ºxçš„ç»“ç‚¹ã€‚"<<endl;
     SeqList s(a,14);
     s.showSeqList();
     x=100;
     for(int i=0;i<5;i++)
     {
         if(s.listInsert(e[i],x)){
-            cout<<"ÔÚË÷Òý"<<e[i]<<"´¦³É¹¦²åÈë"<<x<<endl;
+            cout<<"åœ¨ç´¢å¼•"<<e[i]<<"å¤„æˆåŠŸæ’å…¥"<<x<<endl;
             s.showSeqList();
         }
-        else cout<<"ÔÚ"<<e[i]<<"²åÈëÊ§°Ü"<<endl;
+        else cout<<"åœ¨"<<e[i]<<"æ’å…¥å¤±è´¥"<<endl;
     }
 
-//    <3>É¾³ýË³Ðò±íÖÐµÚi¸öÔªËØ½áµã¡£
-//    ÊµÑé²âÊÔÊý¾Ý»ù±¾ÒªÇó£º
-//    µÚÒ»×éÊý¾Ý£ºË³Ðò±í³¤¶Èn¡Ý10£¬i·Ö±ðÎª5,n,1,n+1,0
-//    µÚ¶þ×éÊý¾Ý£ºË³Ðò±í³¤¶Èn=0£¬ i=5
-    cout<<endl<<"<3>É¾³ýË³Ðò±íÖÐµÚi¸öÔªËØ½áµã¡£"<<endl;
+//    <3>åˆ é™¤é¡ºåºè¡¨ä¸­ç¬¬iä¸ªå…ƒç´ ç»“ç‚¹ã€‚
+//    å®žéªŒæµ‹è¯•æ•°æ®åŸºæœ¬è¦æ±‚ï¼š
+//    ç¬¬ä¸€ç»„æ•°æ®ï¼šé¡ºåºè¡¨é•¿åº¦nâ‰¥10ï¼Œiåˆ†åˆ«ä¸º5,n,1,n+1,0
+//    ç¬¬äºŒç»„æ•°æ®ï¼šé¡ºåºè¡¨é•¿åº¦n=0ï¼Œ i=5
+    cout<<endl<<"<3>åˆ é™¤é¡ºåºè¡¨ä¸­ç¬¬iä¸ªå…ƒç´ ç»“ç‚¹ã€‚"<<endl;
     s.showSeqList();
     for(int i=0;i<5;i++)
     {
         if(s.listDelete(e[i])) {
-            cout<<"ÔÚË÷Òý"<<e[i]<<"É¾³ý³É¹¦"<<endl;
+            cout<<"åœ¨ç´¢å¼•"<<e[i]<<"åˆ é™¤æˆåŠŸ"<<endl;
             s.showSeqList();
         }
-        else cout<<"ÔÚË÷Òý"<<e[i]<<"É¾³ýÊ§°Ü"<<endl;
+        else cout<<"åœ¨ç´¢å¼•"<<e[i]<<"åˆ é™¤å¤±è´¥"<<endl;
     }
 
 
-//    <4>ÔÚÒ»¸öµÝÔöÓÐÐòµÄË³Ðò±íLÖÐ²åÈëÒ»¸öÖµÎªxµÄÔªËØ£¬²¢±£³ÖÆäµÝÔöÓÐÐòÌØÐÔ¡£
-//    ÊµÑé²âÊÔÊý¾Ý»ù±¾ÒªÇó£º
-//    Ë³Ðò±íÔªËØÎª £¨10,20,30,40,50,60,70,80,90,100£©,
-//    x·Ö±ðÎª25£¬85£¬110ºÍ8
-    cout<<endl<<"<4>ÔÚÒ»¸öµÝÔöÓÐÐòµÄË³Ðò±íLÖÐ²åÈëÒ»¸öÖµÎªxµÄÔªËØ£¬²¢±£³ÖÆäµÝÔöÓÐÐòÌØÐÔ"<<endl;
+//    <4>åœ¨ä¸€ä¸ªé€’å¢žæœ‰åºçš„é¡ºåºè¡¨Lä¸­æ’å…¥ä¸€ä¸ªå€¼ä¸ºxçš„å…ƒç´ ï¼Œå¹¶ä¿æŒå…¶é€’å¢žæœ‰åºç‰¹æ€§ã€‚
+//    å®žéªŒæµ‹è¯•æ•°æ®åŸºæœ¬è¦æ±‚ï¼š
+//    é¡ºåºè¡¨å…ƒç´ ä¸º ï¼ˆ10,20,30,40,50,60,70,80,90,100ï¼‰,
+//    xåˆ†åˆ«ä¸º25ï¼Œ85ï¼Œ110å’Œ8
+    cout<<endl<<"<4>åœ¨ä¸€ä¸ªé€’å¢žæœ‰åºçš„é¡ºåºè¡¨Lä¸­æ’å…¥ä¸€ä¸ªå€¼ä¸ºxçš„å…ƒç´ ï¼Œå¹¶ä¿æŒå…¶é€’å¢žæœ‰åºç‰¹æ€§"<<endl;
     int b[]={10,20,30,40,50,60,70,80,90,100};
     s.reCtor(b,10);
     s.showSeqList();
@@ -99,22 +99,22 @@ int main()
     for(int i=0;i<4;i++)
     {
         insert(&s,t[i]);
-        cout<<"²åÈë"<<t[i]<<":"<<endl;
+        cout<<"æ’å…¥"<<t[i]<<":"<<endl;
         s.showSeqList();
     }
 
-//    <5>½«Ë³Ðò±í£ÌÖÐµÄÆæÊýÏîºÍÅ¼ÊýÏî½áµã·Ö½â¿ª£¨ÔªËØÖµÎªÆæÊý¡¢Å¼Êý£©£¬·Ö±ð·ÅÈëÐÂµÄË³Ðò±íÖÐ£¬
-//    È»ºóÔ­±íºÍÐÂ±íÔªËØÍ¬Ê±Êä³öµ½ÆÁÄ»ÉÏ£¬ÒÔ±ã¶ÔÕÕÇó½â½á¹û¡£
-//    ÊµÑé²âÊÔÊý¾Ý»ù±¾ÒªÇó£º
-//    µÚÒ»×éÊý¾Ý£ºË³Ðò±íÔªËØÎª £¨1,2,3,4,5,6,7,8,9,10,20,30,40,50,60£©
-//    µÚ¶þ×éÊý¾Ý£ºË³Ðò±íÔªËØÎª £¨10,20,30,40,50,60,70,80,90,100£©
-    cout<<endl<<"<5>½«Ë³Ðò±í£ÌÖÐµÄÆæÊýÏîºÍÅ¼ÊýÏî½áµã·Ö½â¿ª£¨ÔªËØÖµÎªÆæÊý¡¢Å¼Êý£©£¬·Ö±ð·ÅÈëÐÂµÄË³Ðò±íÖÐ"<<endl;
+//    <5>å°†é¡ºåºè¡¨ï¼¬ä¸­çš„å¥‡æ•°é¡¹å’Œå¶æ•°é¡¹ç»“ç‚¹åˆ†è§£å¼€ï¼ˆå…ƒç´ å€¼ä¸ºå¥‡æ•°ã€å¶æ•°ï¼‰ï¼Œåˆ†åˆ«æ”¾å…¥æ–°çš„é¡ºåºè¡¨ä¸­ï¼Œ
+//    ç„¶åŽåŽŸè¡¨å’Œæ–°è¡¨å…ƒç´ åŒæ—¶è¾“å‡ºåˆ°å±å¹•ä¸Šï¼Œä»¥ä¾¿å¯¹ç…§æ±‚è§£ç»“æžœã€‚
+//    å®žéªŒæµ‹è¯•æ•°æ®åŸºæœ¬è¦æ±‚ï¼š
+//    ç¬¬ä¸€ç»„æ•°æ®ï¼šé¡ºåºè¡¨å…ƒç´ ä¸º ï¼ˆ1,2,3,4,5,6,7,8,9,10,20,30,40,50,60ï¼‰
+//    ç¬¬äºŒç»„æ•°æ®ï¼šé¡ºåºè¡¨å…ƒç´ ä¸º ï¼ˆ10,20,30,40,50,60,70,80,90,100ï¼‰
+    cout<<endl<<"<5>å°†é¡ºåºè¡¨ï¼¬ä¸­çš„å¥‡æ•°é¡¹å’Œå¶æ•°é¡¹ç»“ç‚¹åˆ†è§£å¼€ï¼ˆå…ƒç´ å€¼ä¸ºå¥‡æ•°ã€å¶æ•°ï¼‰ï¼Œåˆ†åˆ«æ”¾å…¥æ–°çš„é¡ºåºè¡¨ä¸­"<<endl;
     int m1[]={1,2,3,4,5,6,7,8,9,10,20,30,40,50,60};
     int m2[]={10,20,30,40,50,60,70,80,90,100};
     SeqList n;
     for(int i=0;i<2;i++)
     {
-        cout<<"µÚ"<<i+1<<"×éÊý¾Ý£º"<<endl;
+        cout<<"ç¬¬"<<i+1<<"ç»„æ•°æ®ï¼š"<<endl;
         if(i==0){
             s.reCtor(m1,sizeof(m1)/sizeof(m1[0]));
         }
@@ -130,19 +130,19 @@ int main()
     }
 
 
-//    <6>ÇóÁ½¸öµÝÔöÓÐÐòË³Ðò±íL1ºÍL2ÖÐµÄ¹«¹²ÔªËØ£¬·ÅÈëÐÂµÄË³Ðò±íL3ÖÐ¡£
-//    ÊµÑé²âÊÔÊý¾Ý»ù±¾ÒªÇó£º
-//    µÚÒ»×é
-//    µÚÒ»¸öË³Ðò±íÔªËØÎª £¨1£¬3£¬6£¬10£¬15£¬16£¬17£¬18£¬19£¬20£©
-//    µÚ¶þ¸öË³Ðò±íÔªËØÎª £¨1£¬2£¬3£¬4£¬5£¬6£¬7£¬8£¬9£¬10£¬18£¬20£¬30£©
-//    µÚ¶þ×é
-//    µÚÒ»¸öË³Ðò±íÔªËØÎª £¨1£¬3£¬6£¬10£¬15£¬16£¬17£¬18£¬19£¬20£©
-//    µÚ¶þ¸öË³Ðò±íÔªËØÎª £¨2£¬4£¬5£¬7£¬8£¬9£¬12£¬22£©
-//    µÚÈý×é
-//    µÚÒ»¸öË³Ðò±íÔªËØÎª £¨£©
-//    µÚ¶þ¸öË³Ðò±íÔªËØÎª £¨1£¬2£¬3£¬4£¬5£¬6£¬7£¬8£¬9£¬10£©
+//    <6>æ±‚ä¸¤ä¸ªé€’å¢žæœ‰åºé¡ºåºè¡¨L1å’ŒL2ä¸­çš„å…¬å…±å…ƒç´ ï¼Œæ”¾å…¥æ–°çš„é¡ºåºè¡¨L3ä¸­ã€‚
+//    å®žéªŒæµ‹è¯•æ•°æ®åŸºæœ¬è¦æ±‚ï¼š
+//    ç¬¬ä¸€ç»„
+//    ç¬¬ä¸€ä¸ªé¡ºåºè¡¨å…ƒç´ ä¸º ï¼ˆ1ï¼Œ3ï¼Œ6ï¼Œ10ï¼Œ15ï¼Œ16ï¼Œ17ï¼Œ18ï¼Œ19ï¼Œ20ï¼‰
+//    ç¬¬äºŒä¸ªé¡ºåºè¡¨å…ƒç´ ä¸º ï¼ˆ1ï¼Œ2ï¼Œ3ï¼Œ4ï¼Œ5ï¼Œ6ï¼Œ7ï¼Œ8ï¼Œ9ï¼Œ10ï¼Œ18ï¼Œ20ï¼Œ30ï¼‰
+//    ç¬¬äºŒç»„
+//    ç¬¬ä¸€ä¸ªé¡ºåºè¡¨å…ƒç´ ä¸º ï¼ˆ1ï¼Œ3ï¼Œ6ï¼Œ10ï¼Œ15ï¼Œ16ï¼Œ17ï¼Œ18ï¼Œ19ï¼Œ20ï¼‰
+//    ç¬¬äºŒä¸ªé¡ºåºè¡¨å…ƒç´ ä¸º ï¼ˆ2ï¼Œ4ï¼Œ5ï¼Œ7ï¼Œ8ï¼Œ9ï¼Œ12ï¼Œ22ï¼‰
+//    ç¬¬ä¸‰ç»„
+//    ç¬¬ä¸€ä¸ªé¡ºåºè¡¨å…ƒç´ ä¸º ï¼ˆï¼‰
+//    ç¬¬äºŒä¸ªé¡ºåºè¡¨å…ƒç´ ä¸º ï¼ˆ1ï¼Œ2ï¼Œ3ï¼Œ4ï¼Œ5ï¼Œ6ï¼Œ7ï¼Œ8ï¼Œ9ï¼Œ10ï¼‰
 
-    cout<<endl<<"<6>ÇóÁ½¸öµÝÔöÓÐÐòË³Ðò±íL1ºÍL2ÖÐµÄ¹«¹²ÔªËØ£¬·ÅÈëÐÂµÄË³Ðò±íL3ÖÐ"<<endl;
+    cout<<endl<<"<6>æ±‚ä¸¤ä¸ªé€’å¢žæœ‰åºé¡ºåºè¡¨L1å’ŒL2ä¸­çš„å…¬å…±å…ƒç´ ï¼Œæ”¾å…¥æ–°çš„é¡ºåºè¡¨L3ä¸­"<<endl;
     int p1[]={1,3,6,10,15,16,17,18,19,20};
     int p2[]={1,2,3,4,5,6,7,8,9,10,18,20,};
     int p3[]={2,4,5,7,8,9,12,22};
@@ -150,7 +150,7 @@ int main()
 
     for(int i=0;i<3;i++)
     {
-        cout<<"µÚ"<<i+1<<"×éÔªËØ£º"<<endl;
+        cout<<"ç¬¬"<<i+1<<"ç»„å…ƒç´ ï¼š"<<endl;
         if(i==0) {
             s.reCtor(p1,sizeof(p1)/sizeof(p1[0]));
             c.reCtor(p2,sizeof(p2)/sizeof(p2[0]));
@@ -167,147 +167,147 @@ int main()
         c.showSeqList();
         n.clearSeqList();
         common(s,c,n);
-        cout<<"¹«¹²ÔªËØÎª£º"<<endl;
+        cout<<"å…¬å…±å…ƒç´ ä¸ºï¼š"<<endl;
         n.showSeqList();
         cout<<endl;
 
     }
 
-//    <7>É¾³ýµÝÔöÓÐÐòË³Ðò±íÖÐµÄÖØ¸´ÔªËØ£¬²¢Í³¼ÆÒÆ¶¯ÔªËØ´ÎÊý£¬ÒªÇóÊ±¼äÐÔÄÜ×îºÃ¡£
-//    ÊµÑé²âÊÔÊý¾Ý»ù±¾ÒªÇó£º
-//    µÚÒ»×éÊý¾Ý£ºË³Ðò±íÔªËØÎª £¨1,2,3,4,5,6,7,8,9£©
-//    µÚ¶þ×éÊý¾Ý£ºË³Ðò±íÔªËØÎª £¨1,1,2,2,2,3,4,5,5,5,6,6,7,7,8,8,9£©
-//    µÚÈý×éÊý¾Ý£ºË³Ðò±íÔªËØÎª £¨1,2,3,4,5,5,6,7,8,8,9,9,9,9,9£©
+//    <7>åˆ é™¤é€’å¢žæœ‰åºé¡ºåºè¡¨ä¸­çš„é‡å¤å…ƒç´ ï¼Œå¹¶ç»Ÿè®¡ç§»åŠ¨å…ƒç´ æ¬¡æ•°ï¼Œè¦æ±‚æ—¶é—´æ€§èƒ½æœ€å¥½ã€‚
+//    å®žéªŒæµ‹è¯•æ•°æ®åŸºæœ¬è¦æ±‚ï¼š
+//    ç¬¬ä¸€ç»„æ•°æ®ï¼šé¡ºåºè¡¨å…ƒç´ ä¸º ï¼ˆ1,2,3,4,5,6,7,8,9ï¼‰
+//    ç¬¬äºŒç»„æ•°æ®ï¼šé¡ºåºè¡¨å…ƒç´ ä¸º ï¼ˆ1,1,2,2,2,3,4,5,5,5,6,6,7,7,8,8,9ï¼‰
+//    ç¬¬ä¸‰ç»„æ•°æ®ï¼šé¡ºåºè¡¨å…ƒç´ ä¸º ï¼ˆ1,2,3,4,5,5,6,7,8,8,9,9,9,9,9ï¼‰
 
     cout<<endl
-        <<"<7>É¾³ýµÝÔöÓÐÐòË³Ðò±íÖÐµÄÖØ¸´ÔªËØ£¬²¢Í³¼ÆÒÆ¶¯ÔªËØ´ÎÊý£¬ÒªÇóÊ±¼äÐÔÄÜ×îºÃ¡£"<<endl;
+        <<"<7>åˆ é™¤é€’å¢žæœ‰åºé¡ºåºè¡¨ä¸­çš„é‡å¤å…ƒç´ ï¼Œå¹¶ç»Ÿè®¡ç§»åŠ¨å…ƒç´ æ¬¡æ•°ï¼Œè¦æ±‚æ—¶é—´æ€§èƒ½æœ€å¥½ã€‚"<<endl;
     int p5[]={1,2,3,4,5,6,7,8,9};
     int p6[]={1,1,2,2,2,3,4,5,5,5,6,6,7,7,8,8,9};
     int p7[]={1,2,3,4,5,5,6,7,8,8,9,9,9,9,9};
     for(int i=0;i<3;i++) {
-        cout<<"µÚ"<<i+1<<"×éÊý¾Ý£º"<<endl;
+        cout<<"ç¬¬"<<i+1<<"ç»„æ•°æ®ï¼š"<<endl;
         if(i==0)s.reCtor(p5,sizeof(p5)/sizeof(p5[0]));
         else if(i==1) s.reCtor(p6,sizeof(p6)/sizeof(p6[0]));
         else s.reCtor(p7,sizeof(p7)/sizeof(p7[0]));
 
         s.showSeqList();
-        cout<<"ÒÆ¶¯´ÎÊý£º"<<removeDuplicateEle(s)<<endl;
+        cout<<"ç§»åŠ¨æ¬¡æ•°ï¼š"<<removeDuplicateEle(s)<<endl;
         s.showSeqList();
     }
 
 
-//    1.4* Ë³Ðò±íÀ©Õ¹ÊµÑé
-//    ·Ç±Ø×öÄÚÈÝ£¬ÓÐÐËÈ¤µÄÍ¬Ñ§Ñ¡×ö£¬
-//    <1> µÝÔöÓÐÐòË³Ðò±íL1¡¢L2£¬¶Ô2±í½øÐÐºÏ²¢£¬²¢Ê¹µÃºÏ²¢ºó³ÉÎªÒ»¸ö¼¯ºÏ£¬¼¯ºÏµÄÔªËØ·Å»ØL1±íÖÐ±£´æ£¬ÒªÇóÊ±¼äÐÔÄÜ×îºÃ¡£
-//    <2>£¨µÝÔöÓÐÐò£©Ë³Ðò±í±íÊ¾¼¯ºÏA¡¢B£¬ÊµÏÖ£º
-//    C=A?B£¬C=A?B£¬C=A-B
-//    A=A?B£¬A=A?B£¬A=A-B
-//    <3>£¨µÝÔöÓÐÐò£©Ë³Ðò±í±íÊ¾¼¯ºÏA¡¢B£¬ÅÐ¶¨AÊÇ·ñBµÄ×Ó¼¯¡£
+//    1.4* é¡ºåºè¡¨æ‰©å±•å®žéªŒ
+//    éžå¿…åšå†…å®¹ï¼Œæœ‰å…´è¶£çš„åŒå­¦é€‰åšï¼Œ
+//    <1> é€’å¢žæœ‰åºé¡ºåºè¡¨L1ã€L2ï¼Œå¯¹2è¡¨è¿›è¡Œåˆå¹¶ï¼Œå¹¶ä½¿å¾—åˆå¹¶åŽæˆä¸ºä¸€ä¸ªé›†åˆï¼Œé›†åˆçš„å…ƒç´ æ”¾å›žL1è¡¨ä¸­ä¿å­˜ï¼Œè¦æ±‚æ—¶é—´æ€§èƒ½æœ€å¥½ã€‚
+//    <2>ï¼ˆé€’å¢žæœ‰åºï¼‰é¡ºåºè¡¨è¡¨ç¤ºé›†åˆAã€Bï¼Œå®žçŽ°ï¼š
+//    C=A?Bï¼ŒC=A?Bï¼ŒC=A-B
+//    A=A?Bï¼ŒA=A?Bï¼ŒA=A-B
+//    <3>ï¼ˆé€’å¢žæœ‰åºï¼‰é¡ºåºè¡¨è¡¨ç¤ºé›†åˆAã€Bï¼Œåˆ¤å®šAæ˜¯å¦Bçš„å­é›†ã€‚
 
     cout<<endl;
-    cout<<"1.4* Ë³Ðò±íÀ©Õ¹ÊµÑé"<<endl;
-    cout<<"<1> µÝÔöÓÐÐòË³Ðò±íL1¡¢L2£¬¶Ô2±í½øÐÐºÏ²¢£¬²¢Ê¹µÃºÏ²¢ºó³ÉÎªÒ»¸ö¼¯ºÏ£¬"<<endl
-        <<"¼¯ºÏµÄÔªËØ·Å»ØL1±íÖÐ±£´æ£¬ÒªÇóÊ±¼äÐÔÄÜ×îºÃ¡£"<<endl;
+    cout<<"1.4* é¡ºåºè¡¨æ‰©å±•å®žéªŒ"<<endl;
+    cout<<"<1> é€’å¢žæœ‰åºé¡ºåºè¡¨L1ã€L2ï¼Œå¯¹2è¡¨è¿›è¡Œåˆå¹¶ï¼Œå¹¶ä½¿å¾—åˆå¹¶åŽæˆä¸ºä¸€ä¸ªé›†åˆï¼Œ"<<endl
+        <<"é›†åˆçš„å…ƒç´ æ”¾å›žL1è¡¨ä¸­ä¿å­˜ï¼Œè¦æ±‚æ—¶é—´æ€§èƒ½æœ€å¥½ã€‚"<<endl;
     s.reCtor(p6,sizeof(p6)/sizeof(p6[0]));
     s.showSeqList();
     c.showSeqList();
     mergeList(s,c);
     s.showSeqList();
 
-//    <2>£¨µÝÔöÓÐÐò£©Ë³Ðò±í±íÊ¾¼¯ºÏA¡¢B£¬ÊµÏÖ£º
-//    C=AUB£¬C=AUB£¬C=A-B
-//    A=AUB£¬A=AUB£¬A=A-B
+//    <2>ï¼ˆé€’å¢žæœ‰åºï¼‰é¡ºåºè¡¨è¡¨ç¤ºé›†åˆAã€Bï¼Œå®žçŽ°ï¼š
+//    C=AUBï¼ŒC=AUBï¼ŒC=A-B
+//    A=AUBï¼ŒA=AUBï¼ŒA=A-B
     cout<<endl;
-    cout<<" <2>£¨µÝÔöÓÐÐò£©Ë³Ðò±í±íÊ¾¼¯ºÏA¡¢B£¬ÊµÏÖ£ºC=AUB"<<endl;
+    cout<<" <2>ï¼ˆé€’å¢žæœ‰åºï¼‰é¡ºåºè¡¨è¡¨ç¤ºé›†åˆAã€Bï¼Œå®žçŽ°ï¼šC=AUB"<<endl;
     s.reCtor(p1,sizeof(p1)/sizeof(p1[0]));
     c.reCtor(p2,sizeof(p2)/sizeof(p2[0]));
     s.showSeqList();
     c.showSeqList();
     mergeSets(s,c,n);
     n.showSeqList();
-    cout<<"<2>£¨µÝÔöÓÐÐò£©Ë³Ðò±í±íÊ¾¼¯ºÏA¡¢B£¬ÊµÏÖ£ºC=AnB"<<endl;
+    cout<<"<2>ï¼ˆé€’å¢žæœ‰åºï¼‰é¡ºåºè¡¨è¡¨ç¤ºé›†åˆAã€Bï¼Œå®žçŽ°ï¼šC=AnB"<<endl;
     s.showSeqList();
     c.showSeqList();
     n.clearSeqList();
     common(s,c,n);
     n.showSeqList();
     cout<<endl;
-    //<3>£¨µÝÔöÓÐÐò£©Ë³Ðò±í±íÊ¾¼¯ºÏA¡¢B£¬ÅÐ¶¨AÊÇ·ñBµÄ×Ó¼¯
-    cout<<"<3>£¨µÝÔöÓÐÐò£©Ë³Ðò±í±íÊ¾¼¯ºÏA¡¢B£¬ÅÐ¶¨AÊÇ·ñBµÄ×Ó¼¯"<<endl;
-    cout<<"µÚÒ»×éÊý¾Ý£º"<<endl;
+    //<3>ï¼ˆé€’å¢žæœ‰åºï¼‰é¡ºåºè¡¨è¡¨ç¤ºé›†åˆAã€Bï¼Œåˆ¤å®šAæ˜¯å¦Bçš„å­é›†
+    cout<<"<3>ï¼ˆé€’å¢žæœ‰åºï¼‰é¡ºåºè¡¨è¡¨ç¤ºé›†åˆAã€Bï¼Œåˆ¤å®šAæ˜¯å¦Bçš„å­é›†"<<endl;
+    cout<<"ç¬¬ä¸€ç»„æ•°æ®ï¼š"<<endl;
     s.showSeqList();
     c.showSeqList();
-    if(subset(&s,&c)) cout<<"µÚÒ»¸ö¼¯ºÏÊÇµÚ¶þ¸öµÄ×Ó¼¯"<<endl;
-    else cout<<"µÚÒ»¸ö¼¯ºÏ²»ÊÇµÚ¶þ¸öµÄ×Ó¼¯"<<endl;
-    cout<<"µÚ¶þ×éÊý¾Ý£º"<<endl;
+    if(subset(&s,&c)) cout<<"ç¬¬ä¸€ä¸ªé›†åˆæ˜¯ç¬¬äºŒä¸ªçš„å­é›†"<<endl;
+    else cout<<"ç¬¬ä¸€ä¸ªé›†åˆä¸æ˜¯ç¬¬äºŒä¸ªçš„å­é›†"<<endl;
+    cout<<"ç¬¬äºŒç»„æ•°æ®ï¼š"<<endl;
     s.reCtor(p5,sizeof(p5)/sizeof(p5[0]));
     s.showSeqList();
     c.showSeqList();
     n.clearSeqList();
-    if(subset(&s,&c)) cout<<"µÚÒ»¸ö¼¯ºÏÊÇµÚ¶þ¸öµÄ×Ó¼¯"<<endl;
-    else cout<<"µÚÒ»¸ö¼¯ºÏ²»ÊÇµÚ¶þ¸öµÄ×Ó¼¯"<<endl;
+    if(subset(&s,&c)) cout<<"ç¬¬ä¸€ä¸ªé›†åˆæ˜¯ç¬¬äºŒä¸ªçš„å­é›†"<<endl;
+    else cout<<"ç¬¬ä¸€ä¸ªé›†åˆä¸æ˜¯ç¬¬äºŒä¸ªçš„å­é›†"<<endl;
 
 
-//    <4>(2011)£¨15 ·Ö£©Ò»¸ö³¤¶ÈÎªL£¨L¡Ý1£©µÄÉýÐòÐòÁÐS£¬´¦ÔÚµÚL/2£¨ÏòÉÏÈ¡Õû£©¸öÎ»ÖÃµÄÊý³ÆÎªS µÄÖÐÎ»Êý¡£
-//    ÀýÈç£¬ÈôÐòÁÐS1=(11, 13, 15, 17, 19)£¬ÔòS1 µÄÖÐÎ»ÊýÊÇ15¡£Á½¸öÐòÁÐµÄÖÐÎ»ÊýÊÇº¬ËüÃÇËùÓÐÔªËØµÄÉýÐòÐòÁÐµÄÖÐÎ»Êý¡£
-//    ÀýÈç£¬ÈôS2=(2, 4, 6, 8, 20)£¬ÔòS1 ºÍS2 µÄÖÐÎ»ÊýÊÇ11¡£
-//    ÏÖÓÐÁ½¸öµÈ³¤ÉýÐòÐòÁÐA ºÍB£¬ÊÔÉè¼ÆÒ»¸öÔÚÊ±¼äºÍ¿Õ¼äÁ½·½Ãæ¶¼¾¡¿ÉÄÜ¸ßÐ§µÄËã·¨£¬ÕÒ³öÁ½¸öÐòÁÐA ºÍB µÄÖÐÎ»Êý¡£ÒªÇó£º
-//    £¨1£©¸ø³öËã·¨µÄ»ù±¾Éè¼ÆË¼Ïë¡£
-//    £¨2£©¸ù¾ÝÉè¼ÆË¼Ïë£¬²ÉÓÃC »òC++ÓïÑÔÃèÊöËã·¨£¬¹Ø¼üÖ®´¦¸ø³ö×¢ÊÍ¡£
-//    £¨3£©ËµÃ÷ÄãËùÉè¼ÆËã·¨µÄÊ±¼ä¸´ÔÓ¶ÈºÍ¿Õ¼ä¸´ÔÓ¶È¡£
+//    <4>(2011)ï¼ˆ15 åˆ†ï¼‰ä¸€ä¸ªé•¿åº¦ä¸ºLï¼ˆLâ‰¥1ï¼‰çš„å‡åºåºåˆ—Sï¼Œå¤„åœ¨ç¬¬L/2ï¼ˆå‘ä¸Šå–æ•´ï¼‰ä¸ªä½ç½®çš„æ•°ç§°ä¸ºS çš„ä¸­ä½æ•°ã€‚
+//    ä¾‹å¦‚ï¼Œè‹¥åºåˆ—S1=(11, 13, 15, 17, 19)ï¼Œåˆ™S1 çš„ä¸­ä½æ•°æ˜¯15ã€‚ä¸¤ä¸ªåºåˆ—çš„ä¸­ä½æ•°æ˜¯å«å®ƒä»¬æ‰€æœ‰å…ƒç´ çš„å‡åºåºåˆ—çš„ä¸­ä½æ•°ã€‚
+//    ä¾‹å¦‚ï¼Œè‹¥S2=(2, 4, 6, 8, 20)ï¼Œåˆ™S1 å’ŒS2 çš„ä¸­ä½æ•°æ˜¯11ã€‚
+//    çŽ°æœ‰ä¸¤ä¸ªç­‰é•¿å‡åºåºåˆ—A å’ŒBï¼Œè¯•è®¾è®¡ä¸€ä¸ªåœ¨æ—¶é—´å’Œç©ºé—´ä¸¤æ–¹é¢éƒ½å°½å¯èƒ½é«˜æ•ˆçš„ç®—æ³•ï¼Œæ‰¾å‡ºä¸¤ä¸ªåºåˆ—A å’ŒB çš„ä¸­ä½æ•°ã€‚è¦æ±‚ï¼š
+//    ï¼ˆ1ï¼‰ç»™å‡ºç®—æ³•çš„åŸºæœ¬è®¾è®¡æ€æƒ³ã€‚
+//    ï¼ˆ2ï¼‰æ ¹æ®è®¾è®¡æ€æƒ³ï¼Œé‡‡ç”¨C æˆ–C++è¯­è¨€æè¿°ç®—æ³•ï¼Œå…³é”®ä¹‹å¤„ç»™å‡ºæ³¨é‡Šã€‚
+//    ï¼ˆ3ï¼‰è¯´æ˜Žä½ æ‰€è®¾è®¡ç®—æ³•çš„æ—¶é—´å¤æ‚åº¦å’Œç©ºé—´å¤æ‚åº¦ã€‚
     cout<<endl;
-    cout<<"¸½¼ÓÌâ<4>:ÇóÁ½¸öµÈ³¤ÉÏÉýÐòÁÐµÄÖÐÎ»Êý"<<endl;
+    cout<<"é™„åŠ é¢˜<4>:æ±‚ä¸¤ä¸ªç­‰é•¿ä¸Šå‡åºåˆ—çš„ä¸­ä½æ•°"<<endl;
     s.reCtor(p1,sizeof(p1)/sizeof(p1[0]));
     c.reCtor(p2,sizeof(p2)/sizeof(p2[0]));
     s.showSeqList();
     c.showSeqList();
 
     x=M_Search(s.data, c.data, sizeof(p1)/sizeof(p1[0]));
-    cout<<"ÖÐÎ»ÊýÎª£º"<<x<<endl;
+    cout<<"ä¸­ä½æ•°ä¸ºï¼š"<<x<<endl;
 
     cout<<"done!"<<endl;
     return 0;
 }
 
-//ÀàÍâ·½·¨
+//ç±»å¤–æ–¹æ³•
 
 
 
-//µÈ³¤ÉÏÉý×ÓÐòÁÐµÄÖÐÎ»Êý
+//ç­‰é•¿ä¸Šå‡å­åºåˆ—çš„ä¸­ä½æ•°
 int M_Search(int A[], int B[], int n)
 {
 	int start1 = 0, end1 = n - 1, m1, start2 = 0, end2 = n - 1, m2;
-	//·Ö±ð±íÊ¾ÐòÁÐAºÍBµÄÊ×Î»Êý¡¢Ä©Î»ÊýºÍÖÐÎ»Êý
+	//åˆ†åˆ«è¡¨ç¤ºåºåˆ—Aå’ŒBçš„é¦–ä½æ•°ã€æœ«ä½æ•°å’Œä¸­ä½æ•°
 	while (start1 != end1 || start2 != end2)
 	{
 		m1 = (start1 + end1) / 2;
 		m2 = (start2 + end2) / 2;
 		if (A[m1] == B[m2])
-			return A[m1];   //Âú×ãÌõ¼þ 1)
-		if (A[m1]<B[m2]) // Âú×ãÌõ¼þ 2)
+			return A[m1];   //æ»¡è¶³æ¡ä»¶ 1)
+		if (A[m1]<B[m2]) // æ»¡è¶³æ¡ä»¶ 2)
 		{
-			if ((start1 + end1) % 2 == 0)  //ÈôÔªËØ¸öÊýÎªÆæÊý
+			if ((start1 + end1) % 2 == 0)  //è‹¥å…ƒç´ ä¸ªæ•°ä¸ºå¥‡æ•°
 			{
-				start1 = m1;  //ÉáÆúAÖÐ¼äµãÒÔÇ°µÄ²¿·ÖÇÒ±£ÁôÖÐ¼äµã
-				end2 = m2;  //ÉáÆúBÖÐ¼äµãÒÔºóµÄ²¿·ÖÇÒ±£ÁôÖÐ¼äµã
+				start1 = m1;  //èˆå¼ƒAä¸­é—´ç‚¹ä»¥å‰çš„éƒ¨åˆ†ä¸”ä¿ç•™ä¸­é—´ç‚¹
+				end2 = m2;  //èˆå¼ƒBä¸­é—´ç‚¹ä»¥åŽçš„éƒ¨åˆ†ä¸”ä¿ç•™ä¸­é—´ç‚¹
 			}
-			else				//ÔªËØ¸öÊýÎªÅ¼Êý
+			else				//å…ƒç´ ä¸ªæ•°ä¸ºå¶æ•°
 			{
-				start1 = m1 + 1;  //ÉáÆúAÖÐ¼äµã¼°ÖÐ¼äµãÒÔÇ°²¿·Ö
-				end2 = m2;  //ÉáÆúBÖÐ¼äµãÒÔºó²¿·ÖÇÒ±£ÁôÖÐ¼äµã
+				start1 = m1 + 1;  //èˆå¼ƒAä¸­é—´ç‚¹åŠä¸­é—´ç‚¹ä»¥å‰éƒ¨åˆ†
+				end2 = m2;  //èˆå¼ƒBä¸­é—´ç‚¹ä»¥åŽéƒ¨åˆ†ä¸”ä¿ç•™ä¸­é—´ç‚¹
 			}
 		}
 		else
-		{  //Âú×ãÌõ¼þ3)
-			if ((start2 + end2) % 2 == 0)   //ÈôÔªËØ¸öÊýÎªÆæÊý
+		{  //æ»¡è¶³æ¡ä»¶3)
+			if ((start2 + end2) % 2 == 0)   //è‹¥å…ƒç´ ä¸ªæ•°ä¸ºå¥‡æ•°
 			{
-				end1 = m1;    //ÉáÆúAÖÐ¼äµãÒÔºóµÄ²¿·ÖÇÒ±£ÁôÖÐ¼äµã
-				start2 = m2;    //ÉáÆúBÖÐ¼äµãÒÔÇ°µÄ²¿·ÖÇÒ±£ÁôÖÐ¼äµã
+				end1 = m1;    //èˆå¼ƒAä¸­é—´ç‚¹ä»¥åŽçš„éƒ¨åˆ†ä¸”ä¿ç•™ä¸­é—´ç‚¹
+				start2 = m2;    //èˆå¼ƒBä¸­é—´ç‚¹ä»¥å‰çš„éƒ¨åˆ†ä¸”ä¿ç•™ä¸­é—´ç‚¹
 			}
-			else     //ÔªËØ¸öÊýÎªÅ¼Êý
+			else     //å…ƒç´ ä¸ªæ•°ä¸ºå¶æ•°
 			{
-				end1 = m1;    //ÉáÆúAÖÐ¼äµãÒÔºó²¿·ÖÇÒ±£ÁôÖÐ¼äµã
-				start2 = m2 + 1;    //ÉáÆúBÖÐ¼äµã¼°ÖÐ¼äµãÒÔÇ°²¿·Ö
+				end1 = m1;    //èˆå¼ƒAä¸­é—´ç‚¹ä»¥åŽéƒ¨åˆ†ä¸”ä¿ç•™ä¸­é—´ç‚¹
+				start2 = m2 + 1;    //èˆå¼ƒBä¸­é—´ç‚¹åŠä¸­é—´ç‚¹ä»¥å‰éƒ¨åˆ†
 			}
 		}
 	}
@@ -316,7 +316,7 @@ int M_Search(int A[], int B[], int n)
 
 
 
-//ºÏ²¢Ë³Ðò±í
+//åˆå¹¶é¡ºåºè¡¨
 void ListMerge(SeqList A,SeqList B,SeqList * pC)
 {
     int i;
@@ -331,7 +331,7 @@ void ListMerge(SeqList A,SeqList B,SeqList * pC)
             pC->listInsert(pC->length(),x);
     }
 }
-//µÝÔöÓÐÐò±í²åÈëÒ»¸öÔªËØ
+//é€’å¢žæœ‰åºè¡¨æ’å…¥ä¸€ä¸ªå…ƒç´ 
 void insert(SeqList *L,Type x)
 {
     int i=L->listLen-1;
@@ -347,7 +347,7 @@ void insert(SeqList *L,Type x)
     }
 }
 
-//ÆæÅ¼Ïî·Ö¿ª
+//å¥‡å¶é¡¹åˆ†å¼€
 void seperate(SeqList& a,SeqList& b,SeqList& c)
 {
     for(int i=1;i<=a.length();i++)
@@ -359,7 +359,7 @@ void seperate(SeqList& a,SeqList& b,SeqList& c)
     }
 }
 
-//ÇóÁ½¸öµÝÔöÓÐÐòµÄË³Ðò±íµÄ¹«¹²ÔªËØ
+//æ±‚ä¸¤ä¸ªé€’å¢žæœ‰åºçš„é¡ºåºè¡¨çš„å…¬å…±å…ƒç´ 
 void common(SeqList& a,SeqList& b,SeqList& c)
 {
     int ia=0,ib=0,ic=0;
@@ -375,7 +375,7 @@ void common(SeqList& a,SeqList& b,SeqList& c)
     }
 }
 
-//É¾³ýµÝÔöÓÐÐòË³Ðò±íÖÐµÄÖØ¸´ÔªËØ
+//åˆ é™¤é€’å¢žæœ‰åºé¡ºåºè¡¨ä¸­çš„é‡å¤å…ƒç´ 
 int removeDuplicateEle(SeqList& a)
 {
     int k=0;
@@ -388,7 +388,7 @@ int removeDuplicateEle(SeqList& a)
     return a.listLen=++k;
 }
 
-//µÝÔöÓÐÐòºÏ²¢³ÉÒ»¸ö¼¯ºÏA=AUB
+//é€’å¢žæœ‰åºåˆå¹¶æˆä¸€ä¸ªé›†åˆA=AUB
 void mergeList(SeqList& a,SeqList& b)
 {
     removeDuplicateEle(a);
@@ -451,7 +451,7 @@ void mergeSets(SeqList& a,SeqList& b,SeqList& c1)
     c1.reCtor(c,k);
 }
 
-//ÅÐ¶ÏAÊÇ²»ÊÇBµÄ×Ó¼¯£¬¶¼ÊÇÓÐÐòµÄ¼¯ºÏ
+//åˆ¤æ–­Aæ˜¯ä¸æ˜¯Bçš„å­é›†ï¼Œéƒ½æ˜¯æœ‰åºçš„é›†åˆ
 bool subset(SeqList *A,SeqList *B)
 {
     int ia=0,ib=0;
