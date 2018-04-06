@@ -21,9 +21,9 @@ class SeqList
 {
 private:
 public:
-    #ifdef DA   //实现一个动态数组的版本
+    #ifdef DA   //脢碌脧脰脪禄赂枚露炉脤卢脢媒脳茅碌脛掳忙卤戮
     Type *data;
-    int size; //记录动态数组当前长度
+    int size; //录脟脗录露炉脤卢脢媒脳茅碌卤脟掳鲁陇露脠
     #else
     Type data[MAXLEN];
     #endif // DA
