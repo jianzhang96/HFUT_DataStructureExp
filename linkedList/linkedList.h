@@ -13,7 +13,7 @@
 #include<iostream>
 using namespace std;
 
-//²»´øÍ·½áµãµÄ·ºĞÍÁ´±í
+//ä¸å¸¦å¤´ç»“ç‚¹çš„æ³›å‹é“¾è¡¨
 template<typename Type>
 class linkedList
 {
@@ -23,15 +23,15 @@ private:
         Type data;
         struct Node *next;
     };
-    Node *root; //¸ù
-    int size;  //¼ÇÂ¼Á´±í´óĞ¡
+    Node *root; //æ ¹
+    int size;  //è®°å½•é“¾è¡¨å¤§å°
 public:
     linkedList();
     linkedList(Type*,int n,bool rear=true);
     virtual ~linkedList();
 
-    void clearList();//Çå¿ÕÁ´±í
-    void reCtor(Type* a,int n,bool rear=true);//ÖØ¹¹
+    void clearList();//æ¸…ç©ºé“¾è¡¨
+    void reCtor(Type* a,int n,bool rear=true);//é‡æ„
     int length() const;
     bool getElement(int i,/*Node* &*/Type& t) const;
     bool locate(Type x,/*Node*&*/int& t);
@@ -39,13 +39,13 @@ public:
     bool listDelete(int i);
     void show() const;
 
-    //µİÔöÓĞĞò²åÈëÒ»¸öÔªËØ±£³ÖµİÔöÓĞĞò
+    //é€’å¢æœ‰åºæ’å…¥ä¸€ä¸ªå…ƒç´ ä¿æŒé€’å¢æœ‰åº
     void incrementalInsert(const Type& x);
-    //ÊıÖµÎªÆæÊıºÍÅ¼ÊıµÄÖµ·Ö±ğ·Åµ½Á½¸öÁ´±íÖĞ
+    //æ•°å€¼ä¸ºå¥‡æ•°å’Œå¶æ•°çš„å€¼åˆ†åˆ«æ”¾åˆ°ä¸¤ä¸ªé“¾è¡¨ä¸­
     void seperateOddEven(linkedList<Type>& a,linkedList<Type>& b) const;
-    //É¾³ıµİÔöÓĞĞòµ«Á´±íÖĞÖØ¸´ÔªËØ
+    //åˆ é™¤é€’å¢æœ‰åºä½†é“¾è¡¨ä¸­é‡å¤å…ƒç´ 
     void removeDupEle();
-    //µİÔöÓĞĞòºÏ²¢³ÉÒ»¸ö¼¯ºÏ£¬²»ÉêÇëĞÂ½Úµã
+    //é€’å¢æœ‰åºåˆå¹¶æˆä¸€ä¸ªé›†åˆï¼Œä¸ç”³è¯·æ–°èŠ‚ç‚¹
     void mergelist(linkedList<Type>& b);
     int findK(int k);
 
@@ -53,23 +53,23 @@ public:
 };
 
 
-//µ¹ÊıÎ»ÖÃkµÄÖµ
+//å€’æ•°ä½ç½®kçš„å€¼
 template<typename Type>
 int linkedList<Type>::findK(int k)
 {
-    Node *p=root,*q=root;//p¡¢qÖ¸ÏòÁ´±íµÄµÚÒ»¸ö½áµã,pÎª¹¤×÷Ö¸Õë
+    Node *p=root,*q=root;//pã€qæŒ‡å‘é“¾è¡¨çš„ç¬¬ä¸€ä¸ªç»“ç‚¹,pä¸ºå·¥ä½œæŒ‡é’ˆ
     int num = 0;
     while(p && num < k) {
         p = p -> next;
         num ++;
-    }//±éÀúÁ´±í£¬ÕÒµÚk¸öÎ»ÖÃ½áµã
+    }//éå†é“¾è¡¨ï¼Œæ‰¾ç¬¬kä¸ªä½ç½®ç»“ç‚¹
     if(p == NULL ) {
-        if(num != k) {//pµ½Î²ÇÒÁ´±íÔªËØ¸öÊıĞ¡ÓÚk
+        if(num != k) {//påˆ°å°¾ä¸”é“¾è¡¨å…ƒç´ ä¸ªæ•°å°äºk
             return 0;
-        }else {//pµ½Î²ÇÒµÚk¸ö½áµãÇ¡ºÃÎªÎ²½áµã
+        }else {//påˆ°å°¾ä¸”ç¬¬kä¸ªç»“ç‚¹æ°å¥½ä¸ºå°¾ç»“ç‚¹
             cout<<q -> data;
         }
-    }else {//ÕÒµ½µÚk¸ö½áµã£¬p¡¢qÏòºóÒÆ¶¯£¬pµ½Á´Î²£¬qÖ¸µÄ¾ÍÊÇµÚk¸öÎ»ÖÃµÄ½áµã
+    }else {//æ‰¾åˆ°ç¬¬kä¸ªç»“ç‚¹ï¼Œpã€qå‘åç§»åŠ¨ï¼Œpåˆ°é“¾å°¾ï¼ŒqæŒ‡çš„å°±æ˜¯ç¬¬kä¸ªä½ç½®çš„ç»“ç‚¹
         while(p) {
             p = p -> next;
             q = q -> next;
@@ -80,7 +80,7 @@ int linkedList<Type>::findK(int k)
 }
 
 
-//Àà·½·¨ÊµÏÖ
+//ç±»æ–¹æ³•å®ç°
 template<typename Type>
 linkedList<Type>::linkedList()
 {
@@ -91,7 +91,7 @@ linkedList<Type>::linkedList()
 template<typename Type>
 linkedList<Type>::linkedList(Type *a,int n,bool rear)
 {
-    //Î²²å·¨½¨Á¢Á´±í£¬Êı¾İÀ´×ÔÊı×é
+    //å°¾æ’æ³•å»ºç«‹é“¾è¡¨ï¼Œæ•°æ®æ¥è‡ªæ•°ç»„
     if(rear){
         Node *R,*u;
         R=root;
@@ -106,7 +106,7 @@ linkedList<Type>::linkedList(Type *a,int n,bool rear)
         }
         R->next=nullptr;
         size=n;
-    }//Í·²å·¨
+    }//å¤´æ’æ³•
     else{
         Node* u;
         for(int i=0;i<n;i++){
@@ -129,10 +129,10 @@ template<typename Type>
 bool linkedList<Type>::getElement(int i,/*Node *&*/Type& t) const
 {
     Node *p=root;
-    //ÕÒµ½¶ÔÓ¦Î»ÖÃµÄ½Úµã
+    //æ‰¾åˆ°å¯¹åº”ä½ç½®çš„èŠ‚ç‚¹
     for(int j=1;p&&j!=i;j++,p=p->next)
         continue;
-    //¿Õ±í£¬³¬³ö·¶Î§
+    //ç©ºè¡¨ï¼Œè¶…å‡ºèŒƒå›´
     if(!p) return false;
     else {
         t=p->data;
@@ -158,20 +158,20 @@ bool linkedList<Type>::locate(Type x,/*Node *&*/int& t)
     }
 }
 
-//ÔöÉ¾ÔªËØ£¬²»º¬Í·½áµã
+//å¢åˆ å…ƒç´ ï¼Œä¸å«å¤´ç»“ç‚¹
 template<typename Type>
 bool linkedList<Type>::listInsert(int i,Type x)
 {
     if(i<1||i>size+1) return false;
     Node *p=new Node;
     p->next=root;
-    //ËÑË÷Ç°Çı½Úµã
+    //æœç´¢å‰é©±èŠ‚ç‚¹
     for(int j=0;p&&j!=i-1;j++,p=p->next)
         continue;
     Node *u=new Node;
     u->data=x;
     u->next=p->next;
-    if(size==0||p->next==root) root=u;//¸ù½ÚµãµÄ¸üĞÂ
+    if(size==0||p->next==root) root=u;//æ ¹èŠ‚ç‚¹çš„æ›´æ–°
     p->next=u;
 
     size++;
@@ -217,7 +217,7 @@ template<typename Type>
 void linkedList<Type>::reCtor(Type* a,int n,bool rear)
 {
     this->clearList();
-    //Î²²å·¨´´½¨µÄÊÇÓëÊı×éÍ¬Ïò
+    //å°¾æ’æ³•åˆ›å»ºçš„æ˜¯ä¸æ•°ç»„åŒå‘
     if(rear){
         Node *r,*u;
         for(int i=0;i<n;i++,size++)
@@ -228,9 +228,9 @@ void linkedList<Type>::reCtor(Type* a,int n,bool rear)
             else r->next=u;
             r=u;
         }
-        r->next=nullptr;//×îºóÒ»¸öÖ¸ÕëÖÃÎª¿Õ
+        r->next=nullptr;//æœ€åä¸€ä¸ªæŒ‡é’ˆç½®ä¸ºç©º
     }
-    //Í·²å·¨
+    //å¤´æ’æ³•
     else {
         Node *u;
 //        u->next=nullptr;
@@ -278,7 +278,7 @@ void linkedList<Type>::incrementalInsert(const Type& x)
     Node *p=root;
     Node *u=new Node;
     u->data=x;
-    if(p->data>x)//²åÈëÎªµÚÒ»¸öÔªËØ
+    if(p->data>x)//æ’å…¥ä¸ºç¬¬ä¸€ä¸ªå…ƒç´ 
     {
         u->next=root;
         root=u;
@@ -287,7 +287,7 @@ void linkedList<Type>::incrementalInsert(const Type& x)
 
     while(p->next&&p->next->data<x)
         p=p->next;
-    if(p->next==nullptr)//²åÈëÎª×îºóÒ»¸öÔªËØ
+    if(p->next==nullptr)//æ’å…¥ä¸ºæœ€åä¸€ä¸ªå…ƒç´ 
     {
         p->next=u;
         u->next=nullptr;
@@ -318,9 +318,9 @@ void linkedList<Type>::seperateOddEven(linkedList<Type>& a,
 template<typename Type>
 void linkedList<Type>::removeDupEle()
 {
-    //ÓÃÁ½¸öÖ¸Õë£¬Ò»¸öÖ¸Ïòµ±Ç°ÔªËØ£¬Ò»¸öÔÚÁ´±íºó²éÕÒ
-    //µ±ÖµÓëµ±Ç°ÔªËØ²»Í¬ÊÇ°ÑÖµ·Åµ½µ±Ç°ÔªËØºóÃæ
-    //²»¸Ä±äÁ´±íµÄÁ¬½Ó
+    //ç”¨ä¸¤ä¸ªæŒ‡é’ˆï¼Œä¸€ä¸ªæŒ‡å‘å½“å‰å…ƒç´ ï¼Œä¸€ä¸ªåœ¨é“¾è¡¨åæŸ¥æ‰¾
+    //å½“å€¼ä¸å½“å‰å…ƒç´ ä¸åŒæ˜¯æŠŠå€¼æ”¾åˆ°å½“å‰å…ƒç´ åé¢
+    //ä¸æ”¹å˜é“¾è¡¨çš„è¿æ¥
     Node *a=root;
     Node *b=a->next;
     int ct=1;
@@ -335,7 +335,7 @@ void linkedList<Type>::removeDupEle()
         else b=b->next;
     }
     size=ct;
-    //aÖ®ºóµÄ½ÚµãÈ«²¿ÊÍ·Å
+    //aä¹‹åçš„èŠ‚ç‚¹å…¨éƒ¨é‡Šæ”¾
     Node* u=a->next,*t;
     a->next=nullptr;
     while(u){
@@ -345,13 +345,13 @@ void linkedList<Type>::removeDupEle()
     }
 }
 
-//¸Ä±äÁ´±í½ÚµãµÄÁ¬½Ó£¬É¨ÃèÁ½±í£¬ÏàÍ¬ÔªËØÌø¹ı
+//æ”¹å˜é“¾è¡¨èŠ‚ç‚¹çš„è¿æ¥ï¼Œæ‰«æä¸¤è¡¨ï¼Œç›¸åŒå…ƒç´ è·³è¿‡
 template<typename Type>
 void linkedList<Type>::mergelist(linkedList<Type>& b)
 {
     Node *t1=this->root;
     Node *t2=b.root,*u,*t;
-    //Í·½áµãÎÊÌâ
+    //å¤´ç»“ç‚¹é—®é¢˜
 
     if(this->root==nullptr){
         root=b.root;
@@ -382,7 +382,7 @@ void linkedList<Type>::mergelist(linkedList<Type>& b)
             size++;
         }
     }
-    //b±íºóÃæµÄÔªËØÈ«Ãæ¸½¼Óµ½±íºóÃæ
+    //bè¡¨åé¢çš„å…ƒç´ å…¨é¢é™„åŠ åˆ°è¡¨åé¢
     if(t2) t1->next=t2;
     while(t2)
     {
@@ -391,3 +391,4 @@ void linkedList<Type>::mergelist(linkedList<Type>& b)
     }
 
 }
+
