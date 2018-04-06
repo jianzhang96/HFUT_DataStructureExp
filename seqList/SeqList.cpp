@@ -114,8 +114,8 @@ bool SeqList::listDelete(int i)
     }
     #endif // DA
     int j;
-    if(listLen<=0) return false; //¿Õ±í
-    else if(i<1 || i>listLen) //³¬½ç
+    if(listLen<=0) return false; //
+    else if(i<1 || i>listLen) //
         return false;
     else {
         for(j=i;j<listLen;j++)
