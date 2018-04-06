@@ -16,8 +16,8 @@ using namespace std;
 
 int main()
 {
-    Forest fo1("./tree11.txt");
-    Forest fo2("./F20.txt");
+    Forest fo1("./data/tree11.txt");
+    Forest fo2("./data/F20.txt");
 
     //(1)按先序、后序、层次遍历森林。
     cout<<"(1)按先序、后序、层次遍历森林。"<<endl;
