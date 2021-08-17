@@ -1,5 +1,4 @@
 ||91mh.me/000.gif
-www.dandanzan.cc/*/*.html###[a-zA-Z]{5}_\d_\d
-www.dandanzan.cc/*/*.html##.animated*
-www.dandanzan.cc##.[a-zA-Z]{5}_[ftg]{1}
-www.dandanzan.cc###[a-zA-Z]{5}_\d_\d
+dandanzan.cc###[a-zA-Z]{5}_\d_\d
+dandanzan.cc##.animated*
+dandanzan.cc##.[a-zA-Z]{5}_[ftg]{1}
